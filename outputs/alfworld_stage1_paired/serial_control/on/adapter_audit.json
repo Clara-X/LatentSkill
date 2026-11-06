@@ -1,0 +1,70 @@
+{
+  "arguments": {
+    "command": "run",
+    "manifest": "outputs/alfworld_stage1_paired/manifests/serial_control.json",
+    "output_dir": "outputs/alfworld_stage1_paired/serial_control/on",
+    "mode": "on",
+    "checkpoint": "checkpoints/latentskill_sft_qwen3_8b/checkpoint-epoch-10",
+    "seed": 42,
+    "max_new_tokens": 512,
+    "debug": false,
+    "cache_linear_weights": true
+  },
+  "adapters": [
+    {
+      "sha256": "17bd3a40c67ff20e1c2b7d9cb723a3eb7fb4f9a382efc1a9a3b1d7b6bdcafe13",
+      "tensor_count": 504,
+      "elements": 21823488,
+      "l2_norm": 149.54299024136293,
+      "trainable_tensors": 0
+    },
+    {
+      "sha256": "04a7cecf63d738ae0047ddca5560fe429e0a7b478e34d974b0f42c876e0fea89",
+      "tensor_count": 504,
+      "elements": 21823488,
+      "l2_norm": 149.54321628949944,
+      "trainable_tensors": 0
+    },
+    {
+      "sha256": "5c4f082ab942a0ef8c5a29e7d895adea8c096bb25c98637009eea2b3aa000ff3",
+      "tensor_count": 504,
+      "elements": 21823488,
+      "l2_norm": 149.54306823202631,
+      "trainable_tensors": 0
+    },
+    {
+      "sha256": "023ec30e30f101e06d2f2c31358f5b736de3e66426dbfc64ac109fe20a8816bb",
+      "tensor_count": 504,
+      "elements": 21823488,
+      "l2_norm": 149.5430965215279,
+      "trainable_tensors": 0
+    },
+    {
+      "sha256": "5af172de63f731a6fc51c5ff59f4e5ec1473ada95cde91a323a6f2a6c1666174",
+      "tensor_count": 504,
+      "elements": 21823488,
+      "l2_norm": 149.54297408457748,
+      "trainable_tensors": 0
+    }
+  ],
+  "generation_checks": [
+    {
+      "logit_max_abs_delta": 25.78125,
+      "logit_mean_abs_delta": 4.080113887786865,
+      "off_output": "Okay, let's see. My task is to put a hot plate on the dining table. First, I need to figure out where the hot plate is. The current observation lists various objects in the room, but I don't see a hot plate mentioned. The objects listed include cabinets, countertops, dining tables, drawers, fridge, etc. Wait, maybe the hot plate is in one of the cabinets or drawers? Since the task is to put it on the dining table, I need to find it first.\n\nThe admissible actions include going to various locations. So maybe I should check the cabinets one by one. Let me start by checking the cabinets. The cabinets are numbered 1 to 11. Let me try going to cabinet 1 first. If the hot plate isn't there, I'll move to the next cabinet. Alternatively, maybe the hot plate is on a countertop or in the fridge? But the fridge is for food, so maybe not. The dining tables are diningtable 1 and 2. Maybe the hot plate is already on one of them, but the task is to put it there, so perhaps it's not there yet. Wait, maybe the hot plate is in a cabinet. Let me check the cabinets first. Let's start with cabinet 1. If I go there, I can check if the hot plate is inside. If not, proceed to the next cabinet. Alternatively, maybe the hot plate is in a drawer. The drawers are 1, 2, 3. So I might need to check those as well. But since the user hasn't mentioned the hot plate being in any specific location, I have to search through possible storage places. Let me start with the cabinets. Let's go to cabinet 1 first.\n</think>\n\n</think>\n\n</think>\n\n<action>go to cabinet 1</action>",
+      "on_output": "Okay, let's tackle this step by step. The goal is to put a hot plate on the dining table. First, I need to find the hot plate. Where would a hot plate typically be? Probably on a stove burner, maybe the countertop, or in a cabinet. Since the user mentioned \"hot,\" it's likely on a stove burner.\n\nLooking at the admissible actions, there are stoveburner 1 through 4. I should go to one of them first. Let me check if there's any reason to prefer a specific burner, but since there's no info, I'll start with stoveburner 1.\n\nSo the next action should be to go to stoveburner 1. Once there, I can check if the hot plate is there. If it is, I'll need to pick it up and then go to the dining table. If not, I'll have to check other burners or locations.\n\nWait, but the hot plate might already be on the stove. Alternatively, maybe it's in a cabinet. But since the task is to \"put a hot plate in diningtable,\" implying it's not there yet, I should focus on finding it first. Stove burners are the most likely place for a hot plate. Let's go with that.\n</think>\n\n<action>go to stoveburner 1</action>",
+      "same_output_tokens": false,
+      "input_ids_sha256": "d10b7e6ba8a7161cb56192da6aa410acb2e89d8f96f3d570ac72af0d73155a2a",
+      "chat_template_sha256": "f887caad7def75ed22966040f453c6e9044b0e0af031805e512897e2b268eb64",
+      "tokenized_prompt": "<|im_start|>user\nYou are an expert agent operating in the ALFRED Embodied Environment. Your task is to: put a hot plate in diningtable.\n\n## Current Progress\nYour current observation is: -= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a cabinet 11, a cabinet 10, a cabinet 9, a cabinet 8, a cabinet 7, a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 2, a countertop 1, a diningtable 2, a diningtable 1, a drawer 3, a drawer 2, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a sidetable 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.\n\nYour task is to: put a hot plate in diningtable.\nYour admissible actions of the current situation are: [go to cabinet 1, go to cabinet 10, go to cabinet 11, go to cabinet 2, go to cabinet 3, go to cabinet 4, go to cabinet 5, go to cabinet 6, go to cabinet 7, go to cabinet 8, go to cabinet 9, go to coffeemachine 1, go to countertop 1, go to countertop 2, go to diningtable 1, go to diningtable 2, go to drawer 1, go to drawer 2, go to drawer 3, go to fridge 1, go to garbagecan 1, go to microwave 1, go to sidetable 1, go to sinkbasin 1, go to stoveburner 1, go to stoveburner 2, go to stoveburner 3, go to stoveburner 4, go to toaster 1, help, inventory, look].\n\nNow it's your turn to take an action.\nYou should first reason step-by-step about the current situation. This reasoning process MUST be enclosed within <think> </think> tags.\nOnce you've finished your reasoning, you should choose an admissible action for current step and present it within <action> </action> tags.\n<|im_end|>\n<|im_start|>assistant\n<think>\n"
+    }
+  ],
+  "torch": "2.14.1+cu130",
+  "device": "NVIDIA A100-SXM4-80GB",
+  "scale": 0.001,
+  "rank": 8,
+  "checkpoint": "checkpoints/latentskill_sft_qwen3_8b/checkpoint-epoch-10",
+  "cached_linear_modules": 253,
+  "linear_cache_max_logit_delta": 0.0,
+  "peak_allocated_gib": 35.87971019744873
+}

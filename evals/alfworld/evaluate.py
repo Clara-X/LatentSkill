@@ -5,6 +5,7 @@ import os
 import json
 import re
 import argparse
+import hashlib
 from pathlib import Path
 from collections import defaultdict
 from typing import Dict, List, Optional, Tuple
@@ -100,6 +101,12 @@ def parse_args():
                     help="Use the stricter SkillRL memory prompt")
     parser.add_argument("--max_games", type=int, default=None,
                         help="Evaluate only the first N episodes")
+    parser.add_argument("--games_manifest", type=str, default=None,
+                        help="JSON list of exact game paths; restrict the existing environment")
+    parser.add_argument("--seed", type=int, default=None,
+                        help="Optional explicit model/environment seed")
+    parser.add_argument("--record_prompt", action="store_true",
+                        help="Record exact prompts and token hashes for protocol diagnostics")
 
     parser.add_argument("--debug_prompt", action="store_true",
                         help="Print prompt tails for early episodes")
@@ -424,6 +431,9 @@ TASK_TYPE_NAMES = {
 
 def main():
     args = parse_args()
+    if args.seed is not None:
+        from latentskill.utils.seed import seed_everything
+        seed_everything(args.seed)
     use_skillrl_memory = args.skillrl_memory_json is not None
 
     if args.raw_base:
@@ -765,7 +775,13 @@ def main():
 
     from alfworld.agents.environment import get_environment
     base_env = get_environment(env_type)(alf_config, train_eval=train_eval)
+    if args.games_manifest is not None:
+        from evals.boundary_gate.diagnose import restrict_games
+        base_env.game_files = restrict_games(base_env.game_files, args.games_manifest)
+        base_env.num_games = len(base_env.game_files)
     env      = base_env.init_env(batch_size=1)
+    if args.seed is not None:
+        env.seed(args.seed)
 
     num_games = base_env.num_games
     print(f"[ALFWorld] {num_games} episodes")
@@ -1214,6 +1230,19 @@ def main():
 
                     "leak_detected": _leak_detected,
                 }
+                if args.record_prompt:
+                    step_log.update({
+                        "prompt": prompt_text,
+                        "input_ids_sha256": hashlib.sha256(
+                            json.dumps(input_ids[0].tolist()).encode()
+                        ).hexdigest(),
+                        "prompt_tokens": int(input_ids.shape[1]),
+                        "generated_tokens": int(new_tokens.shape[0]),
+                        "hit_token_limit": int(new_tokens.shape[0]) >= args.max_new_tokens,
+                        "chat_template_sha256": hashlib.sha256(
+                            tokenizer.chat_template.encode()
+                        ).hexdigest(),
+                    })
 
                 if in_admissible:
                     final_action = admissible_map[parsed_action_norm]
@@ -1225,6 +1254,8 @@ def main():
                 # Keep the invalid action visible during debugging instead of silently replacing it.
 
                 step_log["final_action"] = final_action
+                if args.record_prompt:
+                    step_log["final_action_admissible"] = final_action in admissible
 
                 step_log["action"] = final_action
 
@@ -1246,6 +1277,16 @@ def main():
 
                 step_log["won"] = won
                 steps_log.append(step_log)
+                if args.record_prompt:
+                    (output_dir / "progress.json").write_text(json.dumps({
+                        "episode": episode_idx + 1, "episodes": eval_num_games,
+                        "step": step, "gamefile": gamefile, "mode": mode,
+                        "action": action, "won": won,
+                        "is_parse_valid": is_parse_valid,
+                        "in_admissible": in_admissible,
+                        "generated_tokens": int(new_tokens.shape[0]),
+                        "hit_token_limit": int(new_tokens.shape[0]) >= args.max_new_tokens,
+                    }) + "\n")
 
                 history.append((obs, action))
                 step_count += 1

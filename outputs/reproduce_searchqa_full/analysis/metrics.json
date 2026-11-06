@@ -1,0 +1,96 @@
+{
+  "count": 3125,
+  "correct": 1093,
+  "em": 0.34976,
+  "datasets": {
+    "nq": {
+      "count": 500,
+      "correct": 181,
+      "em": 0.362,
+      "paper_em": 0.362,
+      "delta_pp": 0.0,
+      "empty_answers": 11,
+      "average_steps": 2.728,
+      "max_step_questions": 20
+    },
+    "triviaqa": {
+      "count": 500,
+      "correct": 294,
+      "em": 0.588,
+      "paper_em": 0.576,
+      "delta_pp": 1.2,
+      "empty_answers": 9,
+      "average_steps": 2.642,
+      "max_step_questions": 31
+    },
+    "popqa": {
+      "count": 500,
+      "correct": 180,
+      "em": 0.36,
+      "paper_em": 0.41,
+      "delta_pp": -5.0,
+      "empty_answers": 11,
+      "average_steps": 2.692,
+      "max_step_questions": 21
+    },
+    "hotpotqa": {
+      "count": 500,
+      "correct": 187,
+      "em": 0.374,
+      "paper_em": 0.396,
+      "delta_pp": -2.2,
+      "empty_answers": 11,
+      "average_steps": 2.976,
+      "max_step_questions": 51
+    },
+    "2wikimultihopqa": {
+      "count": 500,
+      "correct": 152,
+      "em": 0.304,
+      "paper_em": 0.32,
+      "delta_pp": -1.6,
+      "empty_answers": 41,
+      "average_steps": 3.09,
+      "max_step_questions": 75
+    },
+    "musique": {
+      "count": 500,
+      "correct": 57,
+      "em": 0.114,
+      "paper_em": 0.098,
+      "delta_pp": 1.6,
+      "empty_answers": 83,
+      "average_steps": 3.346,
+      "max_step_questions": 197
+    },
+    "bamboogle": {
+      "count": 125,
+      "correct": 42,
+      "em": 0.336,
+      "paper_em": 0.256,
+      "delta_pp": 8.0,
+      "empty_answers": 4,
+      "average_steps": 3.008,
+      "max_step_questions": 10
+    }
+  },
+  "empty_answers": 170,
+  "empty_final_actions": {
+    "invalid": 8,
+    "search": 162
+  },
+  "actions": {
+    "search": 6150,
+    "answer": 2955,
+    "invalid": 8
+  },
+  "retrieval_statuses": {
+    "200": 6150
+  },
+  "near_generation_limit_steps": 36,
+  "near_generation_limit_questions": 36,
+  "near_generation_limit_empty_questions": 9,
+  "empty_retrieval_steps": 0,
+  "average_steps": 2.91616,
+  "checks": "3125 unique expected IDs; EM recomputed and matched"
+}

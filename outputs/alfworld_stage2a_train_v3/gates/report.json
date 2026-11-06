@@ -1,0 +1,768 @@
+{
+  "scope": "one decision at each fixed state, then fixed-mode continuation; not dynamic-gate full episodes",
+  "input_sha256": "7c4313a7d5a166397138f68c436bee9cf64fa8c9cb91b63260c09a7a844d5036",
+  "split_sizes": {
+    "train": 88,
+    "tune": 44,
+    "validation": 47
+  },
+  "removed_cross_split_feature_duplicates": [],
+  "split_gain_counts": {
+    "train": {
+      "0": 59,
+      "-1": 16,
+      "1": 13
+    },
+    "tune": {
+      "0": 22,
+      "1": 14,
+      "-1": 8
+    },
+    "validation": {
+      "-1": 9,
+      "0": 34,
+      "1": 4
+    }
+  },
+  "task_type_training_mean_gain": {
+    "clean": 0.25,
+    "cool": -0.3125,
+    "heat": -0.25,
+    "look_at_obj_in_light": 0.10416666666666666,
+    "pick_and_place": 0.0,
+    "pick_two_and_place": 0.125
+  },
+  "benefit_C": 1.0,
+  "benefit_threshold": -0.033487636259431255,
+  "semantic_threshold": 0.0,
+  "selection": "train fits models; tune selects C/thresholds; validation never used to choose settings",
+  "sealed_test": "not collected, trained, tuned, or evaluated",
+  "results": {
+    "always_off": {
+      "states": 47,
+      "games": 12,
+      "families": 12,
+      "selected_remaining_success_rate": 0.7446808510638298,
+      "family_balanced_remaining_success_rate": 0.75,
+      "gain_vs_off": 0.0,
+      "activation_rate": 0.0,
+      "negative_transfer_rate": 0.0,
+      "harmful_activation_fraction": 0.0,
+      "positive_transfer_retention": 0.0,
+      "gain_counts": {
+        "-1": 9,
+        "0": 34,
+        "1": 4
+      },
+      "per_task_type": {
+        "clean": {
+          "states": 8,
+          "games": 2,
+          "families": 2,
+          "selected_remaining_success_rate": 0.75,
+          "family_balanced_remaining_success_rate": 0.75,
+          "gain_vs_off": 0.0,
+          "activation_rate": 0.0,
+          "negative_transfer_rate": 0.0,
+          "harmful_activation_fraction": null,
+          "positive_transfer_retention": 0.0,
+          "gain_counts": {
+            "-1": 0,
+            "0": 7,
+            "1": 1
+          }
+        },
+        "cool": {
+          "states": 8,
+          "games": 2,
+          "families": 2,
+          "selected_remaining_success_rate": 0.75,
+          "family_balanced_remaining_success_rate": 0.75,
+          "gain_vs_off": 0.0,
+          "activation_rate": 0.0,
+          "negative_transfer_rate": 0.0,
+          "harmful_activation_fraction": 0.0,
+          "positive_transfer_retention": null,
+          "gain_counts": {
+            "-1": 2,
+            "0": 6,
+            "1": 0
+          }
+        },
+        "heat": {
+          "states": 8,
+          "games": 2,
+          "families": 2,
+          "selected_remaining_success_rate": 1.0,
+          "family_balanced_remaining_success_rate": 1.0,
+          "gain_vs_off": 0.0,
+          "activation_rate": 0.0,
+          "negative_transfer_rate": 0.0,
+          "harmful_activation_fraction": 0.0,
+          "positive_transfer_retention": null,
+          "gain_counts": {
+            "-1": 7,
+            "0": 1,
+            "1": 0
+          }
+        },
+        "look_at_obj_in_light": {
+          "states": 8,
+          "games": 2,
+          "families": 2,
+          "selected_remaining_success_rate": 1.0,
+          "family_balanced_remaining_success_rate": 1.0,
+          "gain_vs_off": 0.0,
+          "activation_rate": 0.0,
+          "negative_transfer_rate": 0.0,
+          "harmful_activation_fraction": null,
+          "positive_transfer_retention": null,
+          "gain_counts": {
+            "-1": 0,
+            "0": 8,
+            "1": 0
+          }
+        },
+        "pick_and_place": {
+          "states": 7,
+          "games": 2,
+          "families": 2,
+          "selected_remaining_success_rate": 1.0,
+          "family_balanced_remaining_success_rate": 1.0,
+          "gain_vs_off": 0.0,
+          "activation_rate": 0.0,
+          "negative_transfer_rate": 0.0,
+          "harmful_activation_fraction": null,
+          "positive_transfer_retention": null,
+          "gain_counts": {
+            "-1": 0,
+            "0": 7,
+            "1": 0
+          }
+        },
+        "pick_two_and_place": {
+          "states": 8,
+          "games": 2,
+          "families": 2,
+          "selected_remaining_success_rate": 0.0,
+          "family_balanced_remaining_success_rate": 0.0,
+          "gain_vs_off": 0.0,
+          "activation_rate": 0.0,
+          "negative_transfer_rate": 0.0,
+          "harmful_activation_fraction": null,
+          "positive_transfer_retention": 0.0,
+          "gain_counts": {
+            "-1": 0,
+            "0": 5,
+            "1": 3
+          }
+        }
+      }
+    },
+    "always_on": {
+      "states": 47,
+      "games": 12,
+      "families": 12,
+      "selected_remaining_success_rate": 0.6382978723404256,
+      "family_balanced_remaining_success_rate": 0.6458333333333333,
+      "gain_vs_off": -0.10638297872340426,
+      "activation_rate": 1.0,
+      "negative_transfer_rate": 0.19148936170212766,
+      "harmful_activation_fraction": 1.0,
+      "positive_transfer_retention": 1.0,
+      "gain_counts": {
+        "-1": 9,
+        "0": 34,
+        "1": 4
+      },
+      "per_task_type": {
+        "clean": {
+          "states": 8,
+          "games": 2,
+          "families": 2,
+          "selected_remaining_success_rate": 0.875,
+          "family_balanced_remaining_success_rate": 0.875,
+          "gain_vs_off": 0.125,
+          "activation_rate": 1.0,
+          "negative_transfer_rate": 0.0,
+          "harmful_activation_fraction": null,
+          "positive_transfer_retention": 1.0,
+          "gain_counts": {
+            "-1": 0,
+            "0": 7,
+            "1": 1
+          }
+        },
+        "cool": {
+          "states": 8,
+          "games": 2,
+          "families": 2,
+          "selected_remaining_success_rate": 0.5,
+          "family_balanced_remaining_success_rate": 0.5,
+          "gain_vs_off": -0.25,
+          "activation_rate": 1.0,
+          "negative_transfer_rate": 0.25,
+          "harmful_activation_fraction": 1.0,
+          "positive_transfer_retention": null,
+          "gain_counts": {
+            "-1": 2,
+            "0": 6,
+            "1": 0
+          }
+        },
+        "heat": {
+          "states": 8,
+          "games": 2,
+          "families": 2,
+          "selected_remaining_success_rate": 0.125,
+          "family_balanced_remaining_success_rate": 0.125,
+          "gain_vs_off": -0.875,
+          "activation_rate": 1.0,
+          "negative_transfer_rate": 0.875,
+          "harmful_activation_fraction": 1.0,
+          "positive_transfer_retention": null,
+          "gain_counts": {
+            "-1": 7,
+            "0": 1,
+            "1": 0
+          }
+        },
+        "look_at_obj_in_light": {
+          "states": 8,
+          "games": 2,
+          "families": 2,
+          "selected_remaining_success_rate": 1.0,
+          "family_balanced_remaining_success_rate": 1.0,
+          "gain_vs_off": 0.0,
+          "activation_rate": 1.0,
+          "negative_transfer_rate": 0.0,
+          "harmful_activation_fraction": null,
+          "positive_transfer_retention": null,
+          "gain_counts": {
+            "-1": 0,
+            "0": 8,
+            "1": 0
+          }
+        },
+        "pick_and_place": {
+          "states": 7,
+          "games": 2,
+          "families": 2,
+          "selected_remaining_success_rate": 1.0,
+          "family_balanced_remaining_success_rate": 1.0,
+          "gain_vs_off": 0.0,
+          "activation_rate": 1.0,
+          "negative_transfer_rate": 0.0,
+          "harmful_activation_fraction": null,
+          "positive_transfer_retention": null,
+          "gain_counts": {
+            "-1": 0,
+            "0": 7,
+            "1": 0
+          }
+        },
+        "pick_two_and_place": {
+          "states": 8,
+          "games": 2,
+          "families": 2,
+          "selected_remaining_success_rate": 0.375,
+          "family_balanced_remaining_success_rate": 0.375,
+          "gain_vs_off": 0.375,
+          "activation_rate": 1.0,
+          "negative_transfer_rate": 0.0,
+          "harmful_activation_fraction": null,
+          "positive_transfer_retention": 1.0,
+          "gain_counts": {
+            "-1": 0,
+            "0": 5,
+            "1": 3
+          }
+        }
+      }
+    },
+    "task_type_gate": {
+      "states": 47,
+      "games": 12,
+      "families": 12,
+      "selected_remaining_success_rate": 0.8297872340425532,
+      "family_balanced_remaining_success_rate": 0.8333333333333334,
+      "gain_vs_off": 0.0851063829787234,
+      "activation_rate": 0.5106382978723404,
+      "negative_transfer_rate": 0.0,
+      "harmful_activation_fraction": 0.0,
+      "positive_transfer_retention": 1.0,
+      "gain_counts": {
+        "-1": 9,
+        "0": 34,
+        "1": 4
+      },
+      "per_task_type": {
+        "clean": {
+          "states": 8,
+          "games": 2,
+          "families": 2,
+          "selected_remaining_success_rate": 0.875,
+          "family_balanced_remaining_success_rate": 0.875,
+          "gain_vs_off": 0.125,
+          "activation_rate": 1.0,
+          "negative_transfer_rate": 0.0,
+          "harmful_activation_fraction": null,
+          "positive_transfer_retention": 1.0,
+          "gain_counts": {
+            "-1": 0,
+            "0": 7,
+            "1": 1
+          }
+        },
+        "cool": {
+          "states": 8,
+          "games": 2,
+          "families": 2,
+          "selected_remaining_success_rate": 0.75,
+          "family_balanced_remaining_success_rate": 0.75,
+          "gain_vs_off": 0.0,
+          "activation_rate": 0.0,
+          "negative_transfer_rate": 0.0,
+          "harmful_activation_fraction": 0.0,
+          "positive_transfer_retention": null,
+          "gain_counts": {
+            "-1": 2,
+            "0": 6,
+            "1": 0
+          }
+        },
+        "heat": {
+          "states": 8,
+          "games": 2,
+          "families": 2,
+          "selected_remaining_success_rate": 1.0,
+          "family_balanced_remaining_success_rate": 1.0,
+          "gain_vs_off": 0.0,
+          "activation_rate": 0.0,
+          "negative_transfer_rate": 0.0,
+          "harmful_activation_fraction": 0.0,
+          "positive_transfer_retention": null,
+          "gain_counts": {
+            "-1": 7,
+            "0": 1,
+            "1": 0
+          }
+        },
+        "look_at_obj_in_light": {
+          "states": 8,
+          "games": 2,
+          "families": 2,
+          "selected_remaining_success_rate": 1.0,
+          "family_balanced_remaining_success_rate": 1.0,
+          "gain_vs_off": 0.0,
+          "activation_rate": 1.0,
+          "negative_transfer_rate": 0.0,
+          "harmful_activation_fraction": null,
+          "positive_transfer_retention": null,
+          "gain_counts": {
+            "-1": 0,
+            "0": 8,
+            "1": 0
+          }
+        },
+        "pick_and_place": {
+          "states": 7,
+          "games": 2,
+          "families": 2,
+          "selected_remaining_success_rate": 1.0,
+          "family_balanced_remaining_success_rate": 1.0,
+          "gain_vs_off": 0.0,
+          "activation_rate": 0.0,
+          "negative_transfer_rate": 0.0,
+          "harmful_activation_fraction": null,
+          "positive_transfer_retention": null,
+          "gain_counts": {
+            "-1": 0,
+            "0": 7,
+            "1": 0
+          }
+        },
+        "pick_two_and_place": {
+          "states": 8,
+          "games": 2,
+          "families": 2,
+          "selected_remaining_success_rate": 0.375,
+          "family_balanced_remaining_success_rate": 0.375,
+          "gain_vs_off": 0.375,
+          "activation_rate": 1.0,
+          "negative_transfer_rate": 0.0,
+          "harmful_activation_fraction": null,
+          "positive_transfer_retention": 1.0,
+          "gain_counts": {
+            "-1": 0,
+            "0": 5,
+            "1": 3
+          }
+        }
+      }
+    },
+    "semantic_router": {
+      "states": 47,
+      "games": 12,
+      "families": 12,
+      "selected_remaining_success_rate": 0.6382978723404256,
+      "family_balanced_remaining_success_rate": 0.6458333333333333,
+      "gain_vs_off": -0.10638297872340426,
+      "activation_rate": 1.0,
+      "negative_transfer_rate": 0.19148936170212766,
+      "harmful_activation_fraction": 1.0,
+      "positive_transfer_retention": 1.0,
+      "gain_counts": {
+        "-1": 9,
+        "0": 34,
+        "1": 4
+      },
+      "per_task_type": {
+        "clean": {
+          "states": 8,
+          "games": 2,
+          "families": 2,
+          "selected_remaining_success_rate": 0.875,
+          "family_balanced_remaining_success_rate": 0.875,
+          "gain_vs_off": 0.125,
+          "activation_rate": 1.0,
+          "negative_transfer_rate": 0.0,
+          "harmful_activation_fraction": null,
+          "positive_transfer_retention": 1.0,
+          "gain_counts": {
+            "-1": 0,
+            "0": 7,
+            "1": 1
+          }
+        },
+        "cool": {
+          "states": 8,
+          "games": 2,
+          "families": 2,
+          "selected_remaining_success_rate": 0.5,
+          "family_balanced_remaining_success_rate": 0.5,
+          "gain_vs_off": -0.25,
+          "activation_rate": 1.0,
+          "negative_transfer_rate": 0.25,
+          "harmful_activation_fraction": 1.0,
+          "positive_transfer_retention": null,
+          "gain_counts": {
+            "-1": 2,
+            "0": 6,
+            "1": 0
+          }
+        },
+        "heat": {
+          "states": 8,
+          "games": 2,
+          "families": 2,
+          "selected_remaining_success_rate": 0.125,
+          "family_balanced_remaining_success_rate": 0.125,
+          "gain_vs_off": -0.875,
+          "activation_rate": 1.0,
+          "negative_transfer_rate": 0.875,
+          "harmful_activation_fraction": 1.0,
+          "positive_transfer_retention": null,
+          "gain_counts": {
+            "-1": 7,
+            "0": 1,
+            "1": 0
+          }
+        },
+        "look_at_obj_in_light": {
+          "states": 8,
+          "games": 2,
+          "families": 2,
+          "selected_remaining_success_rate": 1.0,
+          "family_balanced_remaining_success_rate": 1.0,
+          "gain_vs_off": 0.0,
+          "activation_rate": 1.0,
+          "negative_transfer_rate": 0.0,
+          "harmful_activation_fraction": null,
+          "positive_transfer_retention": null,
+          "gain_counts": {
+            "-1": 0,
+            "0": 8,
+            "1": 0
+          }
+        },
+        "pick_and_place": {
+          "states": 7,
+          "games": 2,
+          "families": 2,
+          "selected_remaining_success_rate": 1.0,
+          "family_balanced_remaining_success_rate": 1.0,
+          "gain_vs_off": 0.0,
+          "activation_rate": 1.0,
+          "negative_transfer_rate": 0.0,
+          "harmful_activation_fraction": null,
+          "positive_transfer_retention": null,
+          "gain_counts": {
+            "-1": 0,
+            "0": 7,
+            "1": 0
+          }
+        },
+        "pick_two_and_place": {
+          "states": 8,
+          "games": 2,
+          "families": 2,
+          "selected_remaining_success_rate": 0.375,
+          "family_balanced_remaining_success_rate": 0.375,
+          "gain_vs_off": 0.375,
+          "activation_rate": 1.0,
+          "negative_transfer_rate": 0.0,
+          "harmful_activation_fraction": null,
+          "positive_transfer_retention": 1.0,
+          "gain_counts": {
+            "-1": 0,
+            "0": 5,
+            "1": 3
+          }
+        }
+      }
+    },
+    "benefit_gate": {
+      "states": 47,
+      "games": 12,
+      "families": 12,
+      "selected_remaining_success_rate": 0.7659574468085106,
+      "family_balanced_remaining_success_rate": 0.7708333333333334,
+      "gain_vs_off": 0.02127659574468085,
+      "activation_rate": 0.5106382978723404,
+      "negative_transfer_rate": 0.0,
+      "harmful_activation_fraction": 0.0,
+      "positive_transfer_retention": 0.25,
+      "gain_counts": {
+        "-1": 9,
+        "0": 34,
+        "1": 4
+      },
+      "per_task_type": {
+        "clean": {
+          "states": 8,
+          "games": 2,
+          "families": 2,
+          "selected_remaining_success_rate": 0.875,
+          "family_balanced_remaining_success_rate": 0.875,
+          "gain_vs_off": 0.125,
+          "activation_rate": 1.0,
+          "negative_transfer_rate": 0.0,
+          "harmful_activation_fraction": null,
+          "positive_transfer_retention": 1.0,
+          "gain_counts": {
+            "-1": 0,
+            "0": 7,
+            "1": 1
+          }
+        },
+        "cool": {
+          "states": 8,
+          "games": 2,
+          "families": 2,
+          "selected_remaining_success_rate": 0.75,
+          "family_balanced_remaining_success_rate": 0.75,
+          "gain_vs_off": 0.0,
+          "activation_rate": 0.0,
+          "negative_transfer_rate": 0.0,
+          "harmful_activation_fraction": 0.0,
+          "positive_transfer_retention": null,
+          "gain_counts": {
+            "-1": 2,
+            "0": 6,
+            "1": 0
+          }
+        },
+        "heat": {
+          "states": 8,
+          "games": 2,
+          "families": 2,
+          "selected_remaining_success_rate": 1.0,
+          "family_balanced_remaining_success_rate": 1.0,
+          "gain_vs_off": 0.0,
+          "activation_rate": 0.0,
+          "negative_transfer_rate": 0.0,
+          "harmful_activation_fraction": 0.0,
+          "positive_transfer_retention": null,
+          "gain_counts": {
+            "-1": 7,
+            "0": 1,
+            "1": 0
+          }
+        },
+        "look_at_obj_in_light": {
+          "states": 8,
+          "games": 2,
+          "families": 2,
+          "selected_remaining_success_rate": 1.0,
+          "family_balanced_remaining_success_rate": 1.0,
+          "gain_vs_off": 0.0,
+          "activation_rate": 1.0,
+          "negative_transfer_rate": 0.0,
+          "harmful_activation_fraction": null,
+          "positive_transfer_retention": null,
+          "gain_counts": {
+            "-1": 0,
+            "0": 8,
+            "1": 0
+          }
+        },
+        "pick_and_place": {
+          "states": 7,
+          "games": 2,
+          "families": 2,
+          "selected_remaining_success_rate": 1.0,
+          "family_balanced_remaining_success_rate": 1.0,
+          "gain_vs_off": 0.0,
+          "activation_rate": 1.0,
+          "negative_transfer_rate": 0.0,
+          "harmful_activation_fraction": null,
+          "positive_transfer_retention": null,
+          "gain_counts": {
+            "-1": 0,
+            "0": 7,
+            "1": 0
+          }
+        },
+        "pick_two_and_place": {
+          "states": 8,
+          "games": 2,
+          "families": 2,
+          "selected_remaining_success_rate": 0.0,
+          "family_balanced_remaining_success_rate": 0.0,
+          "gain_vs_off": 0.0,
+          "activation_rate": 0.125,
+          "negative_transfer_rate": 0.0,
+          "harmful_activation_fraction": null,
+          "positive_transfer_retention": 0.0,
+          "gain_counts": {
+            "-1": 0,
+            "0": 5,
+            "1": 3
+          }
+        }
+      }
+    },
+    "retrospective_oracle": {
+      "states": 47,
+      "games": 12,
+      "families": 12,
+      "selected_remaining_success_rate": 0.8297872340425532,
+      "family_balanced_remaining_success_rate": 0.8333333333333334,
+      "gain_vs_off": 0.0851063829787234,
+      "activation_rate": 0.0851063829787234,
+      "negative_transfer_rate": 0.0,
+      "harmful_activation_fraction": 0.0,
+      "positive_transfer_retention": 1.0,
+      "gain_counts": {
+        "-1": 9,
+        "0": 34,
+        "1": 4
+      },
+      "per_task_type": {
+        "clean": {
+          "states": 8,
+          "games": 2,
+          "families": 2,
+          "selected_remaining_success_rate": 0.875,
+          "family_balanced_remaining_success_rate": 0.875,
+          "gain_vs_off": 0.125,
+          "activation_rate": 0.125,
+          "negative_transfer_rate": 0.0,
+          "harmful_activation_fraction": null,
+          "positive_transfer_retention": 1.0,
+          "gain_counts": {
+            "-1": 0,
+            "0": 7,
+            "1": 1
+          }
+        },
+        "cool": {
+          "states": 8,
+          "games": 2,
+          "families": 2,
+          "selected_remaining_success_rate": 0.75,
+          "family_balanced_remaining_success_rate": 0.75,
+          "gain_vs_off": 0.0,
+          "activation_rate": 0.0,
+          "negative_transfer_rate": 0.0,
+          "harmful_activation_fraction": 0.0,
+          "positive_transfer_retention": null,
+          "gain_counts": {
+            "-1": 2,
+            "0": 6,
+            "1": 0
+          }
+        },
+        "heat": {
+          "states": 8,
+          "games": 2,
+          "families": 2,
+          "selected_remaining_success_rate": 1.0,
+          "family_balanced_remaining_success_rate": 1.0,
+          "gain_vs_off": 0.0,
+          "activation_rate": 0.0,
+          "negative_transfer_rate": 0.0,
+          "harmful_activation_fraction": 0.0,
+          "positive_transfer_retention": null,
+          "gain_counts": {
+            "-1": 7,
+            "0": 1,
+            "1": 0
+          }
+        },
+        "look_at_obj_in_light": {
+          "states": 8,
+          "games": 2,
+          "families": 2,
+          "selected_remaining_success_rate": 1.0,
+          "family_balanced_remaining_success_rate": 1.0,
+          "gain_vs_off": 0.0,
+          "activation_rate": 0.0,
+          "negative_transfer_rate": 0.0,
+          "harmful_activation_fraction": null,
+          "positive_transfer_retention": null,
+          "gain_counts": {
+            "-1": 0,
+            "0": 8,
+            "1": 0
+          }
+        },
+        "pick_and_place": {
+          "states": 7,
+          "games": 2,
+          "families": 2,
+          "selected_remaining_success_rate": 1.0,
+          "family_balanced_remaining_success_rate": 1.0,
+          "gain_vs_off": 0.0,
+          "activation_rate": 0.0,
+          "negative_transfer_rate": 0.0,
+          "harmful_activation_fraction": null,
+          "positive_transfer_retention": null,
+          "gain_counts": {
+            "-1": 0,
+            "0": 7,
+            "1": 0
+          }
+        },
+        "pick_two_and_place": {
+          "states": 8,
+          "games": 2,
+          "families": 2,
+          "selected_remaining_success_rate": 0.375,
+          "family_balanced_remaining_success_rate": 0.375,
+          "gain_vs_off": 0.375,
+          "activation_rate": 0.375,
+          "negative_transfer_rate": 0.0,
+          "harmful_activation_fraction": null,
+          "positive_transfer_retention": 1.0,
+          "gain_counts": {
+            "-1": 0,
+            "0": 5,
+            "1": 3
+          }
+        }
+      }
+    }
+  }
+}

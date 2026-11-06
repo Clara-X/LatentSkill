@@ -1,0 +1,51 @@
+{
+  "command": [
+    "/mnt/yulan/cache/conda/envs/latentskill/bin/python",
+    "-u",
+    "-c",
+    "import random,numpy as np,torch,runpy; random.seed(42); np.random.seed(42); torch.manual_seed(42); runpy.run_module(\"evals.searchqa.evaluate\",run_name=\"__main__\")",
+    "--checkpoint",
+    "checkpoints/latentskill_sft_qwen3_8b/checkpoint-epoch-10",
+    "--test_data",
+    "/mnt/yulan/xujiahui/projects/LatentSkill/data/search_test/search_test_all.jsonl",
+    "--retrieval_url",
+    "http://127.0.0.1:8031/retrieve",
+    "--retrieval_topk",
+    "3",
+    "--max_steps",
+    "4",
+    "--max_new_tokens",
+    "2048",
+    "--context_max_length",
+    "4096",
+    "--conversation_max_length",
+    "4096",
+    "--output_dir",
+    "/mnt/yulan/xujiahui/projects/LatentSkill/outputs/reproduce_searchqa_full/results",
+    "--device",
+    "cuda"
+  ],
+  "gpu": 5,
+  "seed": 42,
+  "pid": 862561,
+  "compatibility_packages": {
+    "transformers": "4.57.1",
+    "tokenizers": "0.22.2",
+    "huggingface-hub": "0.36.0",
+    "datasets": "4.4.1"
+  },
+  "environment": "latentskill",
+  "examples": 3125,
+  "retrieval_pid": 366870,
+  "paper_source": "https://arxiv.org/html/2606.06087v3",
+  "paper_expected_em": {
+    "nq": 0.362,
+    "triviaqa": 0.576,
+    "popqa": 0.41,
+    "hotpotqa": 0.396,
+    "2wikimultihopqa": 0.32,
+    "musique": 0.098,
+    "bamboogle": 0.256,
+    "average": 0.356
+  }
+}

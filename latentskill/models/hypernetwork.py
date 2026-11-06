@@ -209,7 +209,7 @@ class SkillHypernetwork(nn.Module):
         self.backbone = backbone
         self.idx_range, end = self.backbone.partition_adapter_params(self.lora_r, 0)
         self.idx_range.append(end)
-        self.adapter_reg = cfg.optim.adapter_reg if hasattr(cfg, "optim") else 0.0
+        self.adapter_reg = getattr(cfg.optim, "adapter_reg", 0.0) if hasattr(cfg, "optim") else 0.0
         self.method = cfg.hypernetwork.method
         self.backbone.configure_adapter_builder(self.method)
 

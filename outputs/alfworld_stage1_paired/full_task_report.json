@@ -1,0 +1,405 @@
+{
+  "overall": {
+    "base": {
+      "games": 30,
+      "successes": 1,
+      "success_rate": 0.03333333333333333,
+      "beneficial_games": 0,
+      "harmful_games": 0,
+      "positive_transfer_rate": 0.0,
+      "negative_transfer_rate": 0.0,
+      "neutral_games": 30,
+      "mean_steps": 49.4,
+      "invalid_action_rate": 0.8238866396761133,
+      "token_limit_rate": 0.8238866396761133,
+      "parse_failure_rate": 0.8232118758434548,
+      "token_limit_without_action_rate": 0.8232118758434548,
+      "mean_generated_tokens": 490.3252361673414,
+      "context_cap_rate": 0.0,
+      "valid_bare_actions_rejected": 0
+    },
+    "on": {
+      "games": 30,
+      "successes": 7,
+      "success_rate": 0.23333333333333334,
+      "beneficial_games": 7,
+      "harmful_games": 1,
+      "positive_transfer_rate": 0.23333333333333334,
+      "negative_transfer_rate": 0.03333333333333333,
+      "neutral_games": 22,
+      "mean_steps": 44.266666666666666,
+      "invalid_action_rate": 0.29819277108433734,
+      "token_limit_rate": 0.24171686746987953,
+      "parse_failure_rate": 0.2703313253012048,
+      "token_limit_without_action_rate": 0.23795180722891565,
+      "mean_generated_tokens": 332.4344879518072,
+      "context_cap_rate": 0.0,
+      "valid_bare_actions_rejected": 15
+    },
+    "text": {
+      "games": 30,
+      "successes": 4,
+      "success_rate": 0.13333333333333333,
+      "beneficial_games": 4,
+      "harmful_games": 1,
+      "positive_transfer_rate": 0.13333333333333333,
+      "negative_transfer_rate": 0.03333333333333333,
+      "neutral_games": 25,
+      "mean_steps": 47.266666666666666,
+      "invalid_action_rate": 0.8603667136812412,
+      "token_limit_rate": 0.8603667136812412,
+      "parse_failure_rate": 0.8589562764456982,
+      "token_limit_without_action_rate": 0.8589562764456982,
+      "mean_generated_tokens": 496.46191819464036,
+      "context_cap_rate": 0.0,
+      "valid_bare_actions_rejected": 0
+    },
+    "oracle_base_on": {
+      "successes": 8,
+      "games": 30,
+      "success_rate": 0.26666666666666666
+    },
+    "oracle_all_three": {
+      "successes": 10,
+      "games": 30,
+      "success_rate": 0.3333333333333333
+    }
+  },
+  "per_skill": {
+    "heat": {
+      "base": {
+        "games": 10,
+        "successes": 0,
+        "success_rate": 0.0,
+        "beneficial_games": 0,
+        "harmful_games": 0,
+        "positive_transfer_rate": 0.0,
+        "negative_transfer_rate": 0.0,
+        "neutral_games": 10,
+        "mean_steps": 50.0,
+        "invalid_action_rate": 0.798,
+        "token_limit_rate": 0.798,
+        "parse_failure_rate": 0.798,
+        "token_limit_without_action_rate": 0.798,
+        "mean_generated_tokens": 485.742,
+        "context_cap_rate": 0.0,
+        "valid_bare_actions_rejected": 0
+      },
+      "on": {
+        "games": 10,
+        "successes": 1,
+        "success_rate": 0.1,
+        "beneficial_games": 1,
+        "harmful_games": 0,
+        "positive_transfer_rate": 0.1,
+        "negative_transfer_rate": 0.0,
+        "neutral_games": 9,
+        "mean_steps": 47.6,
+        "invalid_action_rate": 0.3277310924369748,
+        "token_limit_rate": 0.27310924369747897,
+        "parse_failure_rate": 0.2920168067226891,
+        "token_limit_without_action_rate": 0.2689075630252101,
+        "mean_generated_tokens": 347.8718487394958,
+        "context_cap_rate": 0.0,
+        "valid_bare_actions_rejected": 2
+      },
+      "text": {
+        "games": 10,
+        "successes": 1,
+        "success_rate": 0.1,
+        "beneficial_games": 1,
+        "harmful_games": 0,
+        "positive_transfer_rate": 0.1,
+        "negative_transfer_rate": 0.0,
+        "neutral_games": 9,
+        "mean_steps": 49.2,
+        "invalid_action_rate": 0.8089430894308943,
+        "token_limit_rate": 0.8130081300813008,
+        "parse_failure_rate": 0.8089430894308943,
+        "token_limit_without_action_rate": 0.8089430894308943,
+        "mean_generated_tokens": 489.7906504065041,
+        "context_cap_rate": 0.0,
+        "valid_bare_actions_rejected": 0
+      },
+      "oracle_base_on": {
+        "successes": 1,
+        "games": 10,
+        "success_rate": 0.1
+      },
+      "oracle_all_three": {
+        "successes": 2,
+        "games": 10,
+        "success_rate": 0.2
+      }
+    },
+    "cool": {
+      "base": {
+        "games": 10,
+        "successes": 1,
+        "success_rate": 0.1,
+        "beneficial_games": 0,
+        "harmful_games": 0,
+        "positive_transfer_rate": 0.0,
+        "negative_transfer_rate": 0.0,
+        "neutral_games": 10,
+        "mean_steps": 48.2,
+        "invalid_action_rate": 0.8298755186721992,
+        "token_limit_rate": 0.8319502074688797,
+        "parse_failure_rate": 0.8298755186721992,
+        "token_limit_without_action_rate": 0.8298755186721992,
+        "mean_generated_tokens": 492.3713692946058,
+        "context_cap_rate": 0.0,
+        "valid_bare_actions_rejected": 0
+      },
+      "on": {
+        "games": 10,
+        "successes": 1,
+        "success_rate": 0.1,
+        "beneficial_games": 1,
+        "harmful_games": 1,
+        "positive_transfer_rate": 0.1,
+        "negative_transfer_rate": 0.1,
+        "neutral_games": 8,
+        "mean_steps": 45.9,
+        "invalid_action_rate": 0.3464052287581699,
+        "token_limit_rate": 0.3006535947712418,
+        "parse_failure_rate": 0.32679738562091504,
+        "token_limit_without_action_rate": 0.29411764705882354,
+        "mean_generated_tokens": 352.2636165577342,
+        "context_cap_rate": 0.0,
+        "valid_bare_actions_rejected": 9
+      },
+      "text": {
+        "games": 10,
+        "successes": 0,
+        "success_rate": 0.0,
+        "beneficial_games": 0,
+        "harmful_games": 1,
+        "positive_transfer_rate": 0.0,
+        "negative_transfer_rate": 0.1,
+        "neutral_games": 9,
+        "mean_steps": 50.0,
+        "invalid_action_rate": 0.924,
+        "token_limit_rate": 0.924,
+        "parse_failure_rate": 0.924,
+        "token_limit_without_action_rate": 0.924,
+        "mean_generated_tokens": 503.33,
+        "context_cap_rate": 0.0,
+        "valid_bare_actions_rejected": 0
+      },
+      "oracle_base_on": {
+        "successes": 2,
+        "games": 10,
+        "success_rate": 0.2
+      },
+      "oracle_all_three": {
+        "successes": 2,
+        "games": 10,
+        "success_rate": 0.2
+      }
+    },
+    "clean": {
+      "base": {
+        "games": 10,
+        "successes": 0,
+        "success_rate": 0.0,
+        "beneficial_games": 0,
+        "harmful_games": 0,
+        "positive_transfer_rate": 0.0,
+        "negative_transfer_rate": 0.0,
+        "neutral_games": 10,
+        "mean_steps": 50.0,
+        "invalid_action_rate": 0.844,
+        "token_limit_rate": 0.842,
+        "parse_failure_rate": 0.842,
+        "token_limit_without_action_rate": 0.842,
+        "mean_generated_tokens": 492.936,
+        "context_cap_rate": 0.0,
+        "valid_bare_actions_rejected": 0
+      },
+      "on": {
+        "games": 10,
+        "successes": 5,
+        "success_rate": 0.5,
+        "beneficial_games": 5,
+        "harmful_games": 0,
+        "positive_transfer_rate": 0.5,
+        "negative_transfer_rate": 0.0,
+        "neutral_games": 5,
+        "mean_steps": 39.3,
+        "invalid_action_rate": 0.20610687022900764,
+        "token_limit_rate": 0.13486005089058525,
+        "parse_failure_rate": 0.178117048346056,
+        "token_limit_without_action_rate": 0.13486005089058525,
+        "mean_generated_tokens": 290.57760814249366,
+        "context_cap_rate": 0.0,
+        "valid_bare_actions_rejected": 4
+      },
+      "text": {
+        "games": 10,
+        "successes": 3,
+        "success_rate": 0.3,
+        "beneficial_games": 3,
+        "harmful_games": 0,
+        "positive_transfer_rate": 0.3,
+        "negative_transfer_rate": 0.0,
+        "neutral_games": 7,
+        "mean_steps": 42.6,
+        "invalid_action_rate": 0.8450704225352113,
+        "token_limit_rate": 0.8403755868544601,
+        "parse_failure_rate": 0.8403755868544601,
+        "token_limit_without_action_rate": 0.8403755868544601,
+        "mean_generated_tokens": 496.1056338028169,
+        "context_cap_rate": 0.0,
+        "valid_bare_actions_rejected": 0
+      },
+      "oracle_base_on": {
+        "successes": 5,
+        "games": 10,
+        "success_rate": 0.5
+      },
+      "oracle_all_three": {
+        "successes": 6,
+        "games": 10,
+        "success_rate": 0.6
+      }
+    }
+  },
+  "protocol_check": {
+    "matching_initial_prompt_hashes": 30,
+    "games": 30
+  },
+  "first_divergence_states": {
+    "heat": {
+      "states": 10,
+      "beneficial": 1,
+      "harmful": 0,
+      "neutral": 9
+    },
+    "cool": {
+      "states": 10,
+      "beneficial": 1,
+      "harmful": 1,
+      "neutral": 8
+    },
+    "clean": {
+      "states": 10,
+      "beneficial": 5,
+      "harmful": 0,
+      "neutral": 5
+    }
+  },
+  "old_probe_audit": {
+    "states": 6,
+    "mode_state_checks": 12,
+    "mean_score_agrees_with_free_generation": 12,
+    "length_normalization_changes_winner": 0,
+    "candidate_order_changes_winner": 1,
+    "free_generation_inadmissible": 6,
+    "scope": "Six previously inspected states; diagnostic only, not held-out evidence"
+  },
+  "backend_parity": {
+    "service_heat": {
+      "serial_audit": "outputs/alfworld_stage1/on/heat/adapter_audit.json",
+      "input_hash_matches": true,
+      "batch_two_matches_serial_text": false,
+      "batch_two_output": "Okay, let's tackle this step by step. The goal is to put a hot potato in the fridge. First, I need to find a potato. Potatoes are usually in a cabinet or drawer. The available locations include several cabinets (1-19), drawers (1-4), and countertops. I'll start by checking the cabinets near the middle, like cabinet 5 or 6, since that's where potatoes are commonly stored. If I don't find one there, I'll expand to other cabinets.\n\nIf I find a potato, the next step is to cook it. The stove burners (1-4) are available, so I can take the potato to one of them. I'll need to put it in a pan, turn on the burner, and wait until it's hot. Alternatively, maybe the microwave could be used, but cooking a potato on the stove is more reliable for getting it hot enough.\n\nOnce the potato is hot, I need to get it to the fridge. The fridge is listed as \"go to fridge 1\". I'll head there and place the potato inside. But first, I need to make sure I have the potato and it's actually hot. Maybe I should check the inventory to confirm I have the potato before proceeding to the fridge.\n\nWait, the admissible actions include \"look\" and \"help\". Maybe I should look around more to find the potato first. Let me try going to cabinet 5 and see if there's a potato there. If not, I'll check other cabinets. Cabinet 19 is on the far end, so maybe the potato is there. Or perhaps it's in a drawer, like drawer 2 or 3. Drawers can also contain potatoes.\n\nAnother consideration: the task says \"hot potato\", so cooking is necessary. If I find a raw potato, I must cook it. If I find a cooked potato already, then I just need to heat it up or put it in the fridge as is. But the user probably wants a fresh potato cooked and then refrigerated.\n\nSo the plan: find potato \u2192 cook it (stove or microwave) \u2192 check it's hot \u2192 put in fridge. Let's start by searching for the potato. I'll go to cabinet 5 first.\n</think>\n\n<action>go to cabinet 5</action>",
+      "serial_output": "Okay, let's tackle this step by step. The goal is to put a hot potato in the fridge. First, I need to find a potato. Potatoes are usually in a cabinet or drawer. The kitchen has cabinets 1-19 and drawers 1-4. I'll start by checking the cabinets first.\n\nLooking at the admissible actions, I can go to any cabinet from 1 to 19. Maybe start with cabinet 1 and work my way up. If I don't find a potato there, move to the next. Alternatively, check the drawers. But since cabinets are more likely for potatoes, I'll try those first.\n\nOnce I find the potato, I need to cook it to make it hot. The stove burners (stoveburner 1-4) are available. I can go to one of the burners, place the potato there, and cook it. After it's cooked, take it out and put it in the fridge.\n\nWait, but how do I know when the potato is cooked? Maybe the task just assumes cooking it briefly on the stove. Or maybe the microwave could be used. But the user specifically said \"hot potato,\" so cooking on the stove makes sense.\n\nAlso, after cooking, I need to put it in the fridge. The fridge is accessible via \"go to fridge 1.\"\n\nSo the plan: find potato (cabinets first), cook it on stove, then put in fridge. Let's start by going to cabinet 1.\n</think>\n\n<action>go to cabinet 1</action>",
+      "adapter_hash_matches": true
+    },
+    "service_clean": {
+      "serial_audit": "outputs/alfworld_stage1/on/clean/adapter_audit.json",
+      "input_hash_matches": true,
+      "batch_two_matches_serial_text": false,
+      "batch_two_output": "Okay, let's tackle this task. The goal is to put a clean soapbar in the toilet. So first, I need to find a soapbar. The user is in a room with various objects: bathtub basin, countertop, drawers, garbage can, hand towel holders, sink basins, toilet, toilet paper hanger, towel holders.\n\nWhere would soap typically be? Maybe in a bathroom cabinet or on a countertop. The drawers might be a good place to check. There are six drawers. I should probably start by opening the drawers to see if any contain soap.\n\nBut wait, the task specifies \"clean\" soap. So maybe the soap is already in the bathtub or sink basin, needing to be cleaned? Or perhaps there's a dirty soapbar that needs washing first. Let me think.\n\nIf I go to the bathtub basin, there might be a soapbar there. But if it's dirty, I'd need to clean it in the sink first. Alternatively, the soap could be on the countertop. The sink basins are also a possibility for a clean soapbar.\n\nAlternatively, maybe the soap is in one of the drawers. Let me check the drawers first. The admissible actions include going to drawer 1 through 6. I'll start with drawer 1. If I don't find soap there, I'll check the next ones. Once I find the soapbar, I need to ensure it's clean. If it's dirty, I'll take it to the sink basin to wash it. Then, after it's clean, I can proceed to the toilet.\n\nWait, but the task says \"put a clean soapbar in toilet.\" So the soapbar must be clean before putting it in the toilet. So the steps would be: find soapbar, clean it (if necessary), then put it in the toilet.\n\nSo first action: go to drawer 1 to check if soap is there. If not, go to drawer 2, and so on. If I find it in a drawer, take it. Then go to the sink basin to clean it. Once clean, go to the toilet and put it in.\n\nAlternatively, if the soap is already clean, just take it and put it in the toilet. But I need to confirm it's clean. If I find a soapbar in the bathtub basin, that might be dirty, so I should wash it first.\n\nAnother possibility: the soap is on the countertop. So checking the countertop might be another option. But the",
+      "serial_output": "Okay, let's tackle this task. The goal is to put a clean soapbar in the toilet. So first, I need to find a soapbar. The user is in a room with various objects: bathtub basin, countertop, drawers, garbage can, hand towel holders, sink basins, toilet, toilet paper hanger, towel holders.\n\nWhere would soap typically be? Maybe in a bathroom cabinet or on a countertop. The drawers might be a good place to check. There are six drawers. I should probably start by opening the drawers to see if any contain soap.\n\nBut wait, the task specifies \"clean\" soap. So maybe the soap is already in the bathtub or sink basin, needing to be cleaned? Or perhaps there's a dirty soapbar that needs washing first. Let me think.\n\nIf I go to the bathtub basin, there might be a soapbar there. But if it's dirty, I'd need to clean it in the sink first. Alternatively, the soap could be on the countertop. The sink basins are also a possibility for a clean soapbar.\n\nAlternatively, maybe the soap is in one of the drawers. Let me check the drawers first. The admissible actions include going to drawer 1 through 6. I'll start with drawer 1. If I don't find soap there, I'll check the next ones. Once I find the soap, I need to check if it's clean. If not, wash it in the sink. Then, put it in the toilet.\n\nWait, but the task says \"put a clean soapbar in toilet.\" So the key steps are: find soapbar, clean it if necessary, then put it in the toilet.\n\nSo first action: go to drawer 1 to check if soap is there. If not, proceed to next drawers. Let's start with drawer 1.\n</think>\n\n<action>go to drawer 1</action>",
+      "adapter_hash_matches": true
+    },
+    "service_cool": {
+      "serial_audit": "outputs/alfworld_stage1/on/cool/adapter_audit.json",
+      "input_hash_matches": true,
+      "batch_two_matches_serial_text": false,
+      "batch_two_output": "Okay, let's tackle this task. The goal is to put a cool plate in a cabinet. First, I need to find a plate. Plates are usually on the countertop, dining table, or maybe in a cabinet already. Since the user mentioned \"cool,\" the plate needs to be refrigerated first.\n\nSo, first action: go to countertop 1 or 2 and look for a plate. If not there, check the dining table. Once found, take the plate. Then, go to the fridge and put the plate in to cool it. Wait a bit for it to cool down. After cooling, take the plate out and then find a cabinet to store it. But wait, the task says \"put a cool plate in cabinet,\" so maybe after cooling, just put it in any cabinet? But which cabinet? The user didn't specify, so probably any cabinet is fine. Let me outline the steps:\n\n1. Find a plate (countertop 1 or 2, dining table).\n2. Take the plate.\n3. Go to fridge and put the plate in to cool.\n4. Wait for cooling (maybe 5 minutes?).\n5. Take the plate out of the fridge.\n6. Go to a cabinet (any of them).\n7. Put the cool plate in the cabinet.\n\nBut the admissible actions don't include waiting. So after cooling, I need to go to a cabinet and put it in. Let me check the admissible actions again. The user can go to any cabinet 1-12. So once the plate is cool, pick a cabinet, go there, and put it in. Let's start with the first step: go to countertop 1 and look for a plate.\n</think>\n\n<action>go to countertop 1</action>",
+      "serial_output": "Okay, let's tackle this task. The goal is to put a cool plate in a cabinet. First, I need to find a plate. Plates are usually on the countertop, dining table, or maybe in a cabinet already. Since the user mentioned \"cool,\" the plate needs to be refrigerated first.\n\nSo, first action: go to countertop 1 or 2 and look for a plate. If not there, check the dining table. Once found, take the plate. Then, go to the fridge and put the plate in to cool it. Wait a bit for it to cool down. After cooling, take the plate out and then find a cabinet to store it. But wait, the task says \"put a cool plate in cabinet,\" so maybe after cooling, just put it in any cabinet? But which cabinet? The user didn't specify, so probably any cabinet is fine. Let me outline the steps:\n\n1. Find a plate (countertop or dining table).\n2. Take the plate.\n3. Go to fridge, put plate in to cool.\n4. Wait for cooling (maybe 5 minutes?).\n5. Take the cooled plate from fridge.\n6. Find a cabinet (any of them).\n7. Put the plate in the cabinet.\n\nBut the admissible actions include going to specific cabinets. Let me check the current admissible actions again. The user can go to cabinet 1-12. So after cooling, I need to go to one of those cabinets. Maybe cabinet 1 is the closest? Or maybe the user wants to put it in the same cabinet where plates are usually stored. But without more context, any cabinet should work. Let's proceed step by step. First, find the plate. Let me check the dining table first, as plates might be there. So action: go to diningtable 1.\n</think>\n\ngo to diningtable 1",
+      "adapter_hash_matches": true
+    }
+  },
+  "backend_controls": {
+    "service_heat": {
+      "paired_execution": true,
+      "zero_adapter_max_logit_delta": 0.0,
+      "linear_cache_max_logit_delta": 0.0
+    },
+    "service_clean": {
+      "paired_execution": true,
+      "zero_adapter_max_logit_delta": 0.0,
+      "linear_cache_max_logit_delta": 0.0
+    },
+    "service_cool": {
+      "paired_execution": true,
+      "zero_adapter_max_logit_delta": 0.0,
+      "linear_cache_max_logit_delta": 0.0
+    }
+  },
+  "serial_control": {
+    "base": {
+      "games": 3,
+      "successes": 0,
+      "success_rate": 0.0,
+      "beneficial_games": 0,
+      "harmful_games": 0,
+      "positive_transfer_rate": 0.0,
+      "negative_transfer_rate": 0.0,
+      "neutral_games": 3,
+      "mean_steps": 50.0,
+      "invalid_action_rate": 0.7266666666666667,
+      "token_limit_rate": 0.7266666666666667,
+      "parse_failure_rate": 0.7266666666666667,
+      "token_limit_without_action_rate": 0.7266666666666667,
+      "mean_generated_tokens": 476.3,
+      "context_cap_rate": 0.0,
+      "valid_bare_actions_rejected": 0
+    },
+    "on": {
+      "games": 3,
+      "successes": 0,
+      "success_rate": 0.0,
+      "beneficial_games": 0,
+      "harmful_games": 0,
+      "positive_transfer_rate": 0.0,
+      "negative_transfer_rate": 0.0,
+      "neutral_games": 3,
+      "mean_steps": 50.0,
+      "invalid_action_rate": 0.26,
+      "token_limit_rate": 0.18666666666666668,
+      "parse_failure_rate": 0.23333333333333334,
+      "token_limit_without_action_rate": 0.18666666666666668,
+      "mean_generated_tokens": 318.72,
+      "context_cap_rate": 0.0,
+      "valid_bare_actions_rejected": 2
+    },
+    "oracle_base_on": {
+      "successes": 0,
+      "games": 3,
+      "success_rate": 0.0
+    },
+    "success_agreement_with_batched": {
+      "base": 3,
+      "on": 3
+    }
+  },
+  "budget_audit": {
+    "off": {
+      "initial_states": 3,
+      "action_tags_at_512": 1,
+      "action_tags_at_2048": 3,
+      "max_tokens_used": 1278
+    },
+    "on": {
+      "initial_states": 3,
+      "action_tags_at_512": 2,
+      "action_tags_at_2048": 2,
+      "max_tokens_used": 393
+    }
+  }
+}

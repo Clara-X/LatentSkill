@@ -1,0 +1,16 @@
+{
+  "seed": 42,
+  "arguments": {
+    "data_root": "alfworld_data/alfworld/json_2.1.1",
+    "output": "outputs/boundary_gate/pairs.jsonl",
+    "train_games": 4,
+    "val_games": 2,
+    "test_games": 2,
+    "max_steps": 150,
+    "seed": 42
+  },
+  "rows": 48,
+  "failures": [],
+  "label_source": "simulator operation preconditions",
+  "scope": "next-operation probe, not full-skill applicability"
+}

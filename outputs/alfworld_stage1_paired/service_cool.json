@@ -1,0 +1,218 @@
+{
+  "chat_template": "{%- if tools %}\n    {{- '<|im_start|>system\\n' }}\n    {%- if messages[0].role == 'system' %}\n        {{- messages[0].content + '\\n\\n' }}\n    {%- endif %}\n    {{- \"# Tools\\n\\nYou may call one or more functions to assist with the user query.\\n\\nYou are provided with function signatures within <tools></tools> XML tags:\\n<tools>\" }}\n    {%- for tool in tools %}\n        {{- \"\\n\" }}\n        {{- tool | tojson }}\n    {%- endfor %}\n    {{- \"\\n</tools>\\n\\nFor each function call, return a json object with function name and arguments within <tool_call></tool_call> XML tags:\\n<tool_call>\\n{\\\"name\\\": <function-name>, \\\"arguments\\\": <args-json-object>}\\n</tool_call><|im_end|>\\n\" }}\n{%- else %}\n    {%- if messages[0].role == 'system' %}\n        {{- '<|im_start|>system\\n' + messages[0].content + '<|im_end|>\\n' }}\n    {%- endif %}\n{%- endif %}\n{%- set ns = namespace(multi_step_tool=true, last_query_index=messages|length - 1) %}\n{%- for message in messages[::-1] %}\n    {%- set index = (messages|length - 1) - loop.index0 %}\n    {%- if ns.multi_step_tool and message.role == \"user\" and message.content is string and not(message.content.startswith('<tool_response>') and message.content.endswith('</tool_response>')) %}\n        {%- set ns.multi_step_tool = false %}\n        {%- set ns.last_query_index = index %}\n    {%- endif %}\n{%- endfor %}\n{%- for message in messages %}\n    {%- if message.content is string %}\n        {%- set content = message.content %}\n    {%- else %}\n        {%- set content = '' %}\n    {%- endif %}\n    {%- if (message.role == \"user\") or (message.role == \"system\" and not loop.first) %}\n        {{- '<|im_start|>' + message.role + '\\n' + content + '<|im_end|>\\n' }}\n    {%- elif message.role == \"assistant\" %}\n        {%- set reasoning_content = '' %}\n        {%- if message.reasoning_content is string %}\n            {%- set reasoning_content = message.reasoning_content %}\n        {%- else %}\n            {%- if '</think>' in content %}\n                {%- set reasoning_content = content.split('</think>')[0].rstrip('\\n').split('<think>')[-1].lstrip('\\n') %}\n                {%- set content = content.split('</think>')[-1].lstrip('\\n') %}\n            {%- endif %}\n        {%- endif %}\n        {%- if loop.index0 > ns.last_query_index %}\n            {%- if (loop.last or (not loop.last and reasoning_content)) and (enable_thinking is not defined or enable_thinking != false) %}\n                {{- '<|im_start|>' + message.role + '\\n<think>\\n' + reasoning_content.strip('\\n') + '\\n</think>\\n\\n' + content.lstrip('\\n') }}\n            {%- else %}\n                {{- '<|im_start|>' + message.role + '\\n' + content }}\n            {%- endif %}\n        {%- else %}\n            {{- '<|im_start|>' + message.role + '\\n' + content }}\n        {%- endif %}\n        {%- if message.tool_calls %}\n            {%- for tool_call in message.tool_calls %}\n                {%- if (loop.first and content) or (not loop.first) %}\n                    {{- '\\n' }}\n                {%- endif %}\n                {%- if tool_call.function %}\n                    {%- set tool_call = tool_call.function %}\n                {%- endif %}\n                {{- '<tool_call>\\n{\"name\": \"' }}\n                {{- tool_call.name }}\n                {{- '\", \"arguments\": ' }}\n                {%- if tool_call.arguments is string %}\n                    {{- tool_call.arguments }}\n                {%- else %}\n                    {{- tool_call.arguments | tojson }}\n                {%- endif %}\n                {{- '}\\n</tool_call>' }}\n            {%- endfor %}\n        {%- endif %}\n        {{- '<|im_end|>\\n' }}\n    {%- elif message.role == \"tool\" %}\n        {%- if loop.first or (messages[loop.index0 - 1].role != \"tool\") %}\n            {{- '<|im_start|>user' }}\n        {%- endif %}\n        {{- '\\n<tool_response>\\n' }}\n        {{- content }}\n        {{- '\\n</tool_response>' }}\n        {%- if loop.last or (messages[loop.index0 + 1].role != \"tool\") %}\n            {{- '<|im_end|>\\n' }}\n        {%- endif %}\n    {%- endif %}\n{%- endfor %}\n{%- if add_generation_prompt %}\n    {{- '<|im_start|>assistant\\n' }}\n    {%- if enable_thinking is not defined or enable_thinking != false %}\n        {{- '<think>\\n' }}\n    {%- endif %}\n{%- endif %}",
+  "config": {
+    "name": "default",
+    "mode": "pretrain",
+    "resume_global_step": -1,
+    "run": {
+      "seed": 42,
+      "use_amp": false,
+      "gradient_accumulation_steps": 4,
+      "device": "cuda",
+      "use_gradient_checkpoint": false
+    },
+    "paths": {
+      "model_path": "${oc.env:MODEL_PATH,./models/Qwen3-8B}",
+      "output_dir": "${oc.env:OUTPUT_DIR,outputs/model}",
+      "checkpoint_root": "${oc.env:CHECKPOINT_ROOT,checkpoints}",
+      "pretrain_checkpoint_dir": "${oc.env:PRETRAIN_CHECKPOINT_DIR,}",
+      "pretrain_checkpoint_name": "${oc.env:PRETRAIN_CHECKPOINT_NAME,}"
+    },
+    "data": {
+      "context_max_length": 8183,
+      "conversation_max_length": 8192,
+      "train_batch_size": 4,
+      "eval_batch_size": 2,
+      "num_workers": 4,
+      "source": "skill-pretrain",
+      "root_dir": "${oc.env:DATA_ROOT,data}",
+      "paths": {
+        "skill_pretrain_dir": "${data.root_dir}/skill_pretrain",
+        "skill_pretrain_train": "${data.paths.skill_pretrain_dir}/train.jsonl",
+        "skill_pretrain_val": "${data.paths.skill_pretrain_dir}/val.jsonl",
+        "skill_ift_train": "${data.root_dir}/skill_ift/train.json",
+        "skill_ift_val_size": 200
+      }
+    },
+    "optim": {
+      "learning_rate": 5e-05,
+      "weight_decay": 0.01,
+      "num_epochs": 10,
+      "warmup_steps": 500,
+      "grad_clip_norm": 1.0
+    },
+    "logging": {
+      "logging_steps": 1
+    },
+    "eval": {
+      "eval_steps": 1250
+    },
+    "save": {
+      "save_steps": 1250
+    },
+    "model": {
+      "lora_r": 8,
+      "metalora_r": 128,
+      "ift_additional_metalora_r": -1,
+      "num_mem_token": "${num_mem_token}",
+      "backbone_class_path": "latentskill.models.qwen_lora.LatentSkillQwen3ForCausalLM",
+      "config_class_path": "latentskill.models.qwen_lora.Qwen3Config",
+      "tokenizer_from": "${paths.model_path}",
+      "model_from": "${paths.model_path}"
+    },
+    "hypernetwork": {
+      "type": "transformer",
+      "method": "rl",
+      "transformer_cfg": {
+        "encoder_cfg": {
+          "d_model": 4096,
+          "nhead": 32,
+          "dim_feedforward": 8192,
+          "dropout": 0,
+          "activation": "gelu",
+          "layer_norm_eps": 1e-05,
+          "batch_first": true,
+          "norm_first": false,
+          "bias": true
+        },
+        "couple_encoder_cfg": {
+          "d_model": 4096,
+          "nhead": 32,
+          "dim_feedforward": 8192,
+          "dropout": 0,
+          "activation": "gelu",
+          "layer_norm_eps": 1e-05,
+          "batch_first": true,
+          "norm_first": false,
+          "bias": true
+        },
+        "layer_transformer_first": true,
+        "mean_pool_size": 1,
+        "num_layers": 4,
+        "couple_num_layers": 0,
+        "scale": 0.001
+      },
+      "linear_cfg": {
+        "num_layers": 4,
+        "linear_hidden_dim": 8192,
+        "scale": 0.001,
+        "bias": false
+      },
+      "linear_gate_cfg": {
+        "num_layers": 4,
+        "linear_hidden_dim": 8192,
+        "scale": 0.001,
+        "bias": false
+      }
+    },
+    "hydra": {
+      "job": {
+        "chdir": false
+      },
+      "run": {
+        "dir": "${paths.checkpoint_root}/${name}/${mode}/${now:%H-%M-%S}"
+      },
+      "output_subdir": null
+    },
+    "hidden_size": 4096,
+    "num_layers": 36,
+    "num_mem_token": 148,
+    "curriculum": {
+      "stages": [
+        {
+          "start_epoch": 1,
+          "end_epoch": 2,
+          "ratios": {
+            "1": 1.0
+          }
+        },
+        {
+          "start_epoch": 3,
+          "end_epoch": 5,
+          "ratios": {
+            "1": 0.7,
+            "2": 0.3
+          }
+        },
+        {
+          "start_epoch": 6,
+          "end_epoch": 8,
+          "ratios": {
+            "1": 0.55,
+            "2": 0.35,
+            "3": 0.1
+          }
+        },
+        {
+          "start_epoch": 9,
+          "end_epoch": 10,
+          "ratios": {
+            "1": 0.45,
+            "2": 0.4,
+            "3": 0.15
+          }
+        }
+      ]
+    }
+  },
+  "scale": 0.001,
+  "adapters": {
+    "pick_and_place": {
+      "key": "fcda6aa55344d0ab1dce9ac1ed1129021aca2c7fdc05ca63435ffc0fb7451979",
+      "sha256": "17bd3a40c67ff20e1c2b7d9cb723a3eb7fb4f9a382efc1a9a3b1d7b6bdcafe13",
+      "tensor_count": 504,
+      "elements": 21823488,
+      "l2_norm": 149.54299024136293,
+      "trainable_tensors": 0
+    },
+    "cool": {
+      "key": "58ca8221d3dc95c843045f44bd48fc8f5d3e51a8490b846c2724da7e9245aa4c",
+      "sha256": "04a7cecf63d738ae0047ddca5560fe429e0a7b478e34d974b0f42c876e0fea89",
+      "tensor_count": 504,
+      "elements": 21823488,
+      "l2_norm": 149.54321628949944,
+      "trainable_tensors": 0
+    },
+    "heat": {
+      "key": "9a96d1993b5e54c0ba9703cbee3ef0f9c46f76cac8aace40f74fd6eb10f6b32a",
+      "sha256": "5c4f082ab942a0ef8c5a29e7d895adea8c096bb25c98637009eea2b3aa000ff3",
+      "tensor_count": 504,
+      "elements": 21823488,
+      "l2_norm": 149.54306823202631,
+      "trainable_tensors": 0
+    },
+    "clean": {
+      "key": "548efe7d7c51b47a829da1ba518f6c8ab88138728f1904190dbdce4ab2ff38d1",
+      "sha256": "023ec30e30f101e06d2f2c31358f5b736de3e66426dbfc64ac109fe20a8816bb",
+      "tensor_count": 504,
+      "elements": 21823488,
+      "l2_norm": 149.5430965215279,
+      "trainable_tensors": 0
+    },
+    "look_at_obj_in_light": {
+      "key": "9ba0003b5222ec6dcfb3a1b1aab9385bdc46e12796cfd66b4f21c0e34461e251",
+      "sha256": "5af172de63f731a6fc51c5ff59f4e5ec1473ada95cde91a323a6f2a6c1666174",
+      "tensor_count": 504,
+      "elements": 21823488,
+      "l2_norm": 149.54297408457748,
+      "trainable_tensors": 0
+    }
+  },
+  "checkpoint": "checkpoints/latentskill_sft_qwen3_8b/checkpoint-epoch-10",
+  "torch": "2.14.1+cu130",
+  "batch_size": 16,
+  "precision": "float32 checkpoint; cached bfloat16 Linear weights; fp32 embeddings/norms; bfloat16 autocast",
+  "note": "Padding/batching can introduce numerical differences from serial greedy decoding",
+  "parity": {
+    "serial_audit": "outputs/alfworld_stage1/on/cool/adapter_audit.json",
+    "input_hash_matches": true,
+    "batch_two_matches_serial_text": false,
+    "batch_two_output": "Okay, let's tackle this task. The goal is to put a cool plate in a cabinet. First, I need to find a plate. Plates are usually on the countertop, dining table, or maybe in a cabinet already. Since the user mentioned \"cool,\" the plate needs to be refrigerated first.\n\nSo, first action: go to countertop 1 or 2 and look for a plate. If not there, check the dining table. Once found, take the plate. Then, go to the fridge and put the plate in to cool it. Wait a bit for it to cool down. After cooling, take the plate out and then find a cabinet to store it. But wait, the task says \"put a cool plate in cabinet,\" so maybe after cooling, just put it in any cabinet? But which cabinet? The user didn't specify, so probably any cabinet is fine. Let me outline the steps:\n\n1. Find a plate (countertop 1 or 2, dining table).\n2. Take the plate.\n3. Go to fridge and put the plate in to cool.\n4. Wait for cooling (maybe 5 minutes?).\n5. Take the plate out of the fridge.\n6. Go to a cabinet (any of them).\n7. Put the cool plate in the cabinet.\n\nBut the admissible actions don't include waiting. So after cooling, I need to go to a cabinet and put it in. Let me check the admissible actions again. The user can go to any cabinet 1-12. So once the plate is cool, pick a cabinet, go there, and put it in. Let's start with the first step: go to countertop 1 and look for a plate.\n</think>\n\n<action>go to countertop 1</action>",
+    "serial_output": "Okay, let's tackle this task. The goal is to put a cool plate in a cabinet. First, I need to find a plate. Plates are usually on the countertop, dining table, or maybe in a cabinet already. Since the user mentioned \"cool,\" the plate needs to be refrigerated first.\n\nSo, first action: go to countertop 1 or 2 and look for a plate. If not there, check the dining table. Once found, take the plate. Then, go to the fridge and put the plate in to cool it. Wait a bit for it to cool down. After cooling, take the plate out and then find a cabinet to store it. But wait, the task says \"put a cool plate in cabinet,\" so maybe after cooling, just put it in any cabinet? But which cabinet? The user didn't specify, so probably any cabinet is fine. Let me outline the steps:\n\n1. Find a plate (countertop or dining table).\n2. Take the plate.\n3. Go to fridge, put plate in to cool.\n4. Wait for cooling (maybe 5 minutes?).\n5. Take the cooled plate from fridge.\n6. Find a cabinet (any of them).\n7. Put the plate in the cabinet.\n\nBut the admissible actions include going to specific cabinets. Let me check the current admissible actions again. The user can go to cabinet 1-12. So after cooling, I need to go to one of those cabinets. Maybe cabinet 1 is the closest? Or maybe the user wants to put it in the same cabinet where plates are usually stored. But without more context, any cabinet should work. Let's proceed step by step. First, find the plate. Let me check the dining table first, as plates might be there. So action: go to diningtable 1.\n</think>\n\ngo to diningtable 1",
+    "adapter_hash_matches": true
+  },
+  "paired_execution": true,
+  "zero_adapter_max_logit_delta": 0.0,
+  "cached_linear_modules": 253,
+  "linear_cache_max_logit_delta": 0.0
+}

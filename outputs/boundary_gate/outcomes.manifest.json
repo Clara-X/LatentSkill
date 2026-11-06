@@ -1,0 +1,58 @@
+{
+  "arguments": {
+    "pairs": "outputs/boundary_gate/pairs.jsonl",
+    "output": "outputs/boundary_gate/outcomes.jsonl",
+    "checkpoint": "checkpoints/latentskill_sft_qwen3_8b/checkpoint-epoch-10",
+    "config_name": "models/qwen3_8b",
+    "skill_dir": "evals/alfworld/skills",
+    "device": "cuda:0",
+    "seed": 42
+  },
+  "torch": "2.14.1+cu130",
+  "device": "NVIDIA A100-SXM4-80GB",
+  "seed": 42,
+  "checkpoint_files": {
+    "trainer_state.json": {
+      "bytes": 25,
+      "mtime_ns": 1777588491000000000
+    },
+    "trainer_state.pt": {
+      "bytes": 15234,
+      "mtime_ns": 1777588491000000000
+    },
+    "metalora.pth": {
+      "bytes": 1396856126,
+      "mtime_ns": 1777588491000000000
+    },
+    "training_log.txt": {
+      "bytes": 2655410,
+      "mtime_ns": 1777588488000000000
+    },
+    "launch_script.sh": {
+      "bytes": 3427,
+      "mtime_ns": 1777588502000000000
+    },
+    "mem_tokens.pt": {
+      "bytes": 2426091,
+      "mtime_ns": 1777588488000000000
+    },
+    "training_log_final.txt": {
+      "bytes": 2655605,
+      "mtime_ns": 1777588502000000000
+    },
+    "metanetwork.pth": {
+      "bytes": 2151238040,
+      "mtime_ns": 1777588490000000000
+    }
+  },
+  "skill_sha256": {
+    "clean": "c5f6b21df30a2e04720ee91524e26cb4865d746d773b49329d2d69f734f13a48",
+    "cool": "08e268486b8e6fdecd305c1901720bf2f6a6a7a4d47fa4e2e2cfabe68a19579c",
+    "heat": "dd46cce2137a4042afbba68ce01a8e03e1924f23d77ddd4cb59991115e1a30a0"
+  },
+  "config": "{'name': 'default', 'mode': 'pretrain', 'resume_global_step': -1, 'run': {'seed': 42, 'use_amp': False, 'gradient_accumulation_steps': 4, 'device': 'cuda', 'use_gradient_checkpoint': False}, 'paths': {'model_path': '${oc.env:MODEL_PATH,./models/Qwen3-8B}', 'output_dir': '${oc.env:OUTPUT_DIR,outputs/model}', 'checkpoint_root': '${oc.env:CHECKPOINT_ROOT,checkpoints}', 'pretrain_checkpoint_dir': '${oc.env:PRETRAIN_CHECKPOINT_DIR,}', 'pretrain_checkpoint_name': '${oc.env:PRETRAIN_CHECKPOINT_NAME,}'}, 'data': {'context_max_length': 8183, 'conversation_max_length': 8192, 'train_batch_size': 4, 'eval_batch_size': 2, 'num_workers': 4, 'source': 'skill-pretrain', 'root_dir': '${oc.env:DATA_ROOT,data}', 'paths': {'skill_pretrain_dir': '${data.root_dir}/skill_pretrain', 'skill_pretrain_train': '${data.paths.skill_pretrain_dir}/train.jsonl', 'skill_pretrain_val': '${data.paths.skill_pretrain_dir}/val.jsonl', 'skill_ift_train': '${data.root_dir}/skill_ift/train.json', 'skill_ift_val_size': 200}}, 'optim': {'learning_rate': 5e-05, 'weight_decay': 0.01, 'num_epochs': 10, 'warmup_steps': 500, 'grad_clip_norm': 1.0}, 'logging': {'logging_steps': 1}, 'eval': {'eval_steps': 1250}, 'save': {'save_steps': 1250}, 'model': {'lora_r': 8, 'metalora_r': 128, 'ift_additional_metalora_r': -1, 'num_mem_token': '${num_mem_token}', 'backbone_class_path': 'latentskill.models.qwen_lora.LatentSkillQwen3ForCausalLM', 'config_class_path': 'latentskill.models.qwen_lora.Qwen3Config', 'tokenizer_from': '${paths.model_path}', 'model_from': '${paths.model_path}'}, 'hypernetwork': {'type': 'transformer', 'method': 'rl', 'transformer_cfg': {'encoder_cfg': {'d_model': 4096, 'nhead': 32, 'dim_feedforward': 8192, 'dropout': 0, 'activation': 'gelu', 'layer_norm_eps': 1e-05, 'batch_first': True, 'norm_first': False, 'bias': True}, 'couple_encoder_cfg': {'d_model': 4096, 'nhead': 32, 'dim_feedforward': 8192, 'dropout': 0, 'activation': 'gelu', 'layer_norm_eps': 1e-05, 'batch_first': True, 'norm_first': False, 'bias': True}, 'layer_transformer_first': True, 'mean_pool_size': 1, 'num_layers': 4, 'couple_num_layers': 0, 'scale': 0.001}, 'linear_cfg': {'num_layers': 4, 'linear_hidden_dim': 8192, 'scale': 0.001, 'bias': False}, 'linear_gate_cfg': {'num_layers': 4, 'linear_hidden_dim': 8192, 'scale': 0.001, 'bias': False}}, 'hydra': {'job': {'chdir': False}, 'run': {'dir': '${paths.checkpoint_root}/${name}/${mode}/${now:%H-%M-%S}'}, 'output_subdir': None}, 'hidden_size': 4096, 'num_layers': 36, 'num_mem_token': 148, 'curriculum': {'stages': [{'start_epoch': 1, 'end_epoch': 2, 'ratios': {1: 1.0}}, {'start_epoch': 3, 'end_epoch': 5, 'ratios': {1: 0.7, 2: 0.3}}, {'start_epoch': 6, 'end_epoch': 8, 'ratios': {1: 0.55, 2: 0.35, 3: 0.1}}, {'start_epoch': 9, 'end_epoch': 10, 'ratios': {1: 0.45, 2: 0.4, 3: 0.15}}]}}",
+  "scoring": "mean-token-log-probability, two candidate actions",
+  "reward": "correct next operation/navigation action (not episode success)",
+  "frozen": true,
+  "autocast": "bfloat16"
+}

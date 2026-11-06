@@ -1,0 +1,121 @@
+{
+  "seed": 42,
+  "input": "/mnt/yulan/xujiahui/projects/LatentSkill/outputs/boundary_gate/pairs.jsonl",
+  "split_sizes": {
+    "train": 24,
+    "val": 12,
+    "test": 12
+  },
+  "scope": "real ALFWorld next-action probe; not full-episode performance",
+  "has_frozen_lora_outcomes": false,
+  "results": {
+    "always_off": {
+      "states": 12,
+      "pairs": 6,
+      "activation_rate": 0.0,
+      "boundary_accuracy": 0.5,
+      "false_activation_rate": 0.0,
+      "missed_activation_rate": 1.0,
+      "per_skill": {
+        "clean": {
+          "states": 4,
+          "pairs": 2,
+          "activation_rate": 0.0,
+          "boundary_accuracy": 0.5,
+          "false_activation_rate": 0.0,
+          "missed_activation_rate": 1.0
+        },
+        "cool": {
+          "states": 4,
+          "pairs": 2,
+          "activation_rate": 0.0,
+          "boundary_accuracy": 0.5,
+          "false_activation_rate": 0.0,
+          "missed_activation_rate": 1.0
+        },
+        "heat": {
+          "states": 4,
+          "pairs": 2,
+          "activation_rate": 0.0,
+          "boundary_accuracy": 0.5,
+          "false_activation_rate": 0.0,
+          "missed_activation_rate": 1.0
+        }
+      }
+    },
+    "always_on": {
+      "states": 12,
+      "pairs": 6,
+      "activation_rate": 1.0,
+      "boundary_accuracy": 0.5,
+      "false_activation_rate": 1.0,
+      "missed_activation_rate": 0.0,
+      "per_skill": {
+        "clean": {
+          "states": 4,
+          "pairs": 2,
+          "activation_rate": 1.0,
+          "boundary_accuracy": 0.5,
+          "false_activation_rate": 1.0,
+          "missed_activation_rate": 0.0
+        },
+        "cool": {
+          "states": 4,
+          "pairs": 2,
+          "activation_rate": 1.0,
+          "boundary_accuracy": 0.5,
+          "false_activation_rate": 1.0,
+          "missed_activation_rate": 0.0
+        },
+        "heat": {
+          "states": 4,
+          "pairs": 2,
+          "activation_rate": 1.0,
+          "boundary_accuracy": 0.5,
+          "false_activation_rate": 1.0,
+          "missed_activation_rate": 0.0
+        }
+      }
+    },
+    "applicability": {
+      "states": 12,
+      "pairs": 6,
+      "activation_rate": 0.5,
+      "boundary_accuracy": 1.0,
+      "false_activation_rate": 0.0,
+      "missed_activation_rate": 0.0,
+      "per_skill": {
+        "clean": {
+          "states": 4,
+          "pairs": 2,
+          "activation_rate": 0.5,
+          "boundary_accuracy": 1.0,
+          "false_activation_rate": 0.0,
+          "missed_activation_rate": 0.0
+        },
+        "cool": {
+          "states": 4,
+          "pairs": 2,
+          "activation_rate": 0.5,
+          "boundary_accuracy": 1.0,
+          "false_activation_rate": 0.0,
+          "missed_activation_rate": 0.0
+        },
+        "heat": {
+          "states": 4,
+          "pairs": 2,
+          "activation_rate": 0.5,
+          "boundary_accuracy": 1.0,
+          "false_activation_rate": 0.0,
+          "missed_activation_rate": 0.0
+        }
+      }
+    }
+  },
+  "applicability_training": {
+    "positive_labels": 12,
+    "negative_labels": 12,
+    "validation_threshold": 0.5513672753512991,
+    "constant_heads": {}
+  }
+}

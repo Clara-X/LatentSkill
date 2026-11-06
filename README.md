@@ -256,6 +256,13 @@ python evals/searchqa/retrieval_server.py \
   --port 8000
 ```
 
+## Boundary-Gated LoRA Pilot
+
+The experimental [boundary-gate pilot](evals/boundary_gate/README.md) constructs paired
+ALFWorld states for heat, cool, and clean skills, compares frozen adapters with the
+base policy, and trains lightweight activation gates. It measures local next-action
+decisions; its results should not be interpreted as full-task benchmark performance.
+
 ## Acknowledgment
 
 This project’s hypernetwork implementation is based on SHINE: [https://github.com/MuLabPKU/SHINE](https://github.com/MuLabPKU/SHINE). We thank the original authors for making the implementation and research available to the community.

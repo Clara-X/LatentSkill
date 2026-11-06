@@ -1,0 +1,45 @@
+{
+  "adapters": {
+    "pick_and_place": {
+      "sha256": "bff10fc12e607249d44fbd1c2de86d0c87dad93c10d4b3124215672efb301905",
+      "tensor_count": 504,
+      "elements": 21823488,
+      "l2_norm": 149.54300643959883,
+      "trainable_tensors": 0
+    },
+    "cool": {
+      "sha256": "b7b2fe0359ac4836b6e575e42e881f17099fd2adfb06961001696494872baf6b",
+      "tensor_count": 504,
+      "elements": 21823488,
+      "l2_norm": 149.5432293532933,
+      "trainable_tensors": 0
+    },
+    "heat": {
+      "sha256": "09717df673fe689ac7d124195f826f5bafe93ac5d106fc88f7d5da51c48f8273",
+      "tensor_count": 504,
+      "elements": 21823488,
+      "l2_norm": 149.5430547505081,
+      "trainable_tensors": 0
+    },
+    "clean": {
+      "sha256": "3a70e56f514563378131ea56331889b1571b0a1ec5918c9630b2fbf68211c734",
+      "tensor_count": 504,
+      "elements": 21823488,
+      "l2_norm": 149.54308575353406,
+      "trainable_tensors": 0
+    },
+    "look_at_obj_in_light": {
+      "sha256": "a51a7104cc04f08dc2420abd0a863628b3bd708b0186359f32f3bc4eb8f88d57",
+      "tensor_count": 504,
+      "elements": 21823488,
+      "l2_norm": 149.54298478880676,
+      "trainable_tensors": 0
+    }
+  },
+  "trainable_parameters": 0,
+  "scale": 0.001,
+  "rank": 8,
+  "precision": "native loader; no additional autocast or weight conversion",
+  "chat_template_sha256": "f887caad7def75ed22966040f453c6e9044b0e0af031805e512897e2b268eb64",
+  "backbone_dtype": "torch.float32"
+}

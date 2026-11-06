@@ -1,0 +1,110 @@
+[
+  {
+    "pid": 379248,
+    "gpu": "2",
+    "command": [
+      "/mnt/yulan/cache/conda/envs/latentskill/bin/python",
+      "-u",
+      "-m",
+      "evals.boundary_gate.stage2a_collect",
+      "worker",
+      "--output-dir",
+      "/mnt/yulan/xujiahui/projects/LatentSkill/outputs/alfworld_stage2a_train_v3",
+      "--worker-index",
+      "0",
+      "--workers",
+      "6"
+    ],
+    "exit_code": 0
+  },
+  {
+    "pid": 379252,
+    "gpu": "3",
+    "command": [
+      "/mnt/yulan/cache/conda/envs/latentskill/bin/python",
+      "-u",
+      "-m",
+      "evals.boundary_gate.stage2a_collect",
+      "worker",
+      "--output-dir",
+      "/mnt/yulan/xujiahui/projects/LatentSkill/outputs/alfworld_stage2a_train_v3",
+      "--worker-index",
+      "1",
+      "--workers",
+      "6"
+    ],
+    "exit_code": 0
+  },
+  {
+    "pid": 379253,
+    "gpu": "4",
+    "command": [
+      "/mnt/yulan/cache/conda/envs/latentskill/bin/python",
+      "-u",
+      "-m",
+      "evals.boundary_gate.stage2a_collect",
+      "worker",
+      "--output-dir",
+      "/mnt/yulan/xujiahui/projects/LatentSkill/outputs/alfworld_stage2a_train_v3",
+      "--worker-index",
+      "2",
+      "--workers",
+      "6"
+    ],
+    "exit_code": 0
+  },
+  {
+    "pid": 379255,
+    "gpu": "5",
+    "command": [
+      "/mnt/yulan/cache/conda/envs/latentskill/bin/python",
+      "-u",
+      "-m",
+      "evals.boundary_gate.stage2a_collect",
+      "worker",
+      "--output-dir",
+      "/mnt/yulan/xujiahui/projects/LatentSkill/outputs/alfworld_stage2a_train_v3",
+      "--worker-index",
+      "3",
+      "--workers",
+      "6"
+    ],
+    "exit_code": 0
+  },
+  {
+    "pid": 379256,
+    "gpu": "6",
+    "command": [
+      "/mnt/yulan/cache/conda/envs/latentskill/bin/python",
+      "-u",
+      "-m",
+      "evals.boundary_gate.stage2a_collect",
+      "worker",
+      "--output-dir",
+      "/mnt/yulan/xujiahui/projects/LatentSkill/outputs/alfworld_stage2a_train_v3",
+      "--worker-index",
+      "4",
+      "--workers",
+      "6"
+    ],
+    "exit_code": 0
+  },
+  {
+    "pid": 379257,
+    "gpu": "7",
+    "command": [
+      "/mnt/yulan/cache/conda/envs/latentskill/bin/python",
+      "-u",
+      "-m",
+      "evals.boundary_gate.stage2a_collect",
+      "worker",
+      "--output-dir",
+      "/mnt/yulan/xujiahui/projects/LatentSkill/outputs/alfworld_stage2a_train_v3",
+      "--worker-index",
+      "5",
+      "--workers",
+      "6"
+    ],
+    "exit_code": 0
+  }
+]

@@ -1,0 +1,20 @@
+{
+  "arguments": {
+    "command": "run",
+    "manifest": "outputs/alfworld_stage1_paired/manifests/serial_control.json",
+    "output_dir": "outputs/alfworld_stage1_paired/serial_control/base",
+    "mode": "base",
+    "checkpoint": "checkpoints/latentskill_sft_qwen3_8b/checkpoint-epoch-10",
+    "seed": 42,
+    "max_new_tokens": 512,
+    "debug": false,
+    "cache_linear_weights": true
+  },
+  "adapters": [],
+  "generation_checks": [],
+  "torch": "2.14.1+cu130",
+  "device": "NVIDIA A100-SXM4-80GB",
+  "cached_linear_modules": 253,
+  "linear_cache_max_logit_delta": 0.0,
+  "peak_allocated_gib": 31.680784225463867
+}

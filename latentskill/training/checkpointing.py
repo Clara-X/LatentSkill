@@ -60,7 +60,7 @@ def restore_latentskill_checkpoint(
         )
         skill_hypernet.backbone.model.mem_tokens = saved_mem_tokens
     generator_path = _first_existing_checkpoint_file(
-        in_dir, ("hypernetwork.pth", "skill_hypernet.pth")
+        in_dir, ("hypernetwork.pth", "skill_hypernet.pth", "metanetwork.pth")
     )
     skill_hypernet.generator.load_state_dict(
         torch.load(generator_path, weights_only=False, map_location="cpu")

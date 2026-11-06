@@ -1,0 +1,37 @@
+{
+  "pick_and_place": {
+    "success": 2,
+    "total": 3,
+    "rate": 0.6667
+  },
+  "pick_two_and_place": {
+    "success": 2,
+    "total": 2,
+    "rate": 1.0
+  },
+  "clean": {
+    "success": 3,
+    "total": 3,
+    "rate": 1.0
+  },
+  "heat": {
+    "success": 2,
+    "total": 3,
+    "rate": 0.6667
+  },
+  "cool": {
+    "success": 0,
+    "total": 3,
+    "rate": 0.0
+  },
+  "look_at_obj_in_light": {
+    "success": 3,
+    "total": 3,
+    "rate": 1.0
+  },
+  "overall": {
+    "success": 12,
+    "total": 17,
+    "rate": 0.7059
+  }
+}

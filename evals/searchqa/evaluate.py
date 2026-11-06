@@ -657,6 +657,7 @@ def main():
                 "attack_condition": args.attack,
             }
             detail_f.write(json.dumps(detail_record, ensure_ascii=False) + "\n")
+            detail_f.flush()
 
     DATASET_ORDER = [
         "nq", "hotpotqa", "triviaqa", "popqa",

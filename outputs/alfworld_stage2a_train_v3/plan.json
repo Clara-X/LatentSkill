@@ -1,0 +1,493 @@
+{
+  "seed": 42,
+  "split_search_attempt": 1,
+  "records": [
+    {
+      "gamefile": "/mnt/yulan/xujiahui/projects/LatentSkill/alfworld_data/alfworld/json_2.1.1/train/pick_heat_then_place_in_recep-Mug-None-Shelf-5/trial_T20190906_203744_920699/game.tw-pddl",
+      "family": "pick_heat_then_place_in_recep-Mug-None-Shelf-5",
+      "scene": "5",
+      "task_type": "heat",
+      "split": "train",
+      "goal_content_seen_in_available_ift": false
+    },
+    {
+      "gamefile": "/mnt/yulan/xujiahui/projects/LatentSkill/alfworld_data/alfworld/json_2.1.1/train/pick_heat_then_place_in_recep-Mug-None-Cabinet-20/trial_T20190908_230106_156334/game.tw-pddl",
+      "family": "pick_heat_then_place_in_recep-Mug-None-Cabinet-20",
+      "scene": "20",
+      "task_type": "heat",
+      "split": "train",
+      "goal_content_seen_in_available_ift": false
+    },
+    {
+      "gamefile": "/mnt/yulan/xujiahui/projects/LatentSkill/alfworld_data/alfworld/json_2.1.1/train/pick_heat_then_place_in_recep-Mug-None-CoffeeMachine-15/trial_T20190908_004759_413623/game.tw-pddl",
+      "family": "pick_heat_then_place_in_recep-Mug-None-CoffeeMachine-15",
+      "scene": "15",
+      "task_type": "heat",
+      "split": "train",
+      "goal_content_seen_in_available_ift": false
+    },
+    {
+      "gamefile": "/mnt/yulan/xujiahui/projects/LatentSkill/alfworld_data/alfworld/json_2.1.1/train/pick_heat_then_place_in_recep-Mug-None-CoffeeMachine-23/trial_T20190906_194049_566589/game.tw-pddl",
+      "family": "pick_heat_then_place_in_recep-Mug-None-CoffeeMachine-23",
+      "scene": "23",
+      "task_type": "heat",
+      "split": "train",
+      "goal_content_seen_in_available_ift": false
+    },
+    {
+      "gamefile": "/mnt/yulan/xujiahui/projects/LatentSkill/alfworld_data/alfworld/json_2.1.1/train/pick_cool_then_place_in_recep-Egg-None-Microwave-20/trial_T20190908_052011_844993/game.tw-pddl",
+      "family": "pick_cool_then_place_in_recep-Egg-None-Microwave-20",
+      "scene": "20",
+      "task_type": "cool",
+      "split": "train",
+      "goal_content_seen_in_available_ift": false
+    },
+    {
+      "gamefile": "/mnt/yulan/xujiahui/projects/LatentSkill/alfworld_data/alfworld/json_2.1.1/train/pick_cool_then_place_in_recep-Plate-None-Cabinet-22/trial_T20190908_084019_408981/game.tw-pddl",
+      "family": "pick_cool_then_place_in_recep-Plate-None-Cabinet-22",
+      "scene": "22",
+      "task_type": "cool",
+      "split": "train",
+      "goal_content_seen_in_available_ift": false
+    },
+    {
+      "gamefile": "/mnt/yulan/xujiahui/projects/LatentSkill/alfworld_data/alfworld/json_2.1.1/train/pick_cool_then_place_in_recep-Pan-None-DiningTable-7/trial_T20190908_233004_004856/game.tw-pddl",
+      "family": "pick_cool_then_place_in_recep-Pan-None-DiningTable-7",
+      "scene": "7",
+      "task_type": "cool",
+      "split": "train",
+      "goal_content_seen_in_available_ift": false
+    },
+    {
+      "gamefile": "/mnt/yulan/xujiahui/projects/LatentSkill/alfworld_data/alfworld/json_2.1.1/train/pick_cool_then_place_in_recep-Pot-None-CounterTop-1/trial_T20190909_124252_504581/game.tw-pddl",
+      "family": "pick_cool_then_place_in_recep-Pot-None-CounterTop-1",
+      "scene": "1",
+      "task_type": "cool",
+      "split": "train",
+      "goal_content_seen_in_available_ift": false
+    },
+    {
+      "gamefile": "/mnt/yulan/xujiahui/projects/LatentSkill/alfworld_data/alfworld/json_2.1.1/train/pick_clean_then_place_in_recep-Knife-None-Drawer-22/trial_T20190907_224751_540006/game.tw-pddl",
+      "family": "pick_clean_then_place_in_recep-Knife-None-Drawer-22",
+      "scene": "22",
+      "task_type": "clean",
+      "split": "train",
+      "goal_content_seen_in_available_ift": true
+    },
+    {
+      "gamefile": "/mnt/yulan/xujiahui/projects/LatentSkill/alfworld_data/alfworld/json_2.1.1/train/pick_clean_then_place_in_recep-SoapBar-None-GarbageCan-406/trial_T20190907_015923_805044/game.tw-pddl",
+      "family": "pick_clean_then_place_in_recep-SoapBar-None-GarbageCan-406",
+      "scene": "406",
+      "task_type": "clean",
+      "split": "train",
+      "goal_content_seen_in_available_ift": false
+    },
+    {
+      "gamefile": "/mnt/yulan/xujiahui/projects/LatentSkill/alfworld_data/alfworld/json_2.1.1/train/pick_clean_then_place_in_recep-Tomato-None-GarbageCan-15/trial_T20190908_190029_853407/game.tw-pddl",
+      "family": "pick_clean_then_place_in_recep-Tomato-None-GarbageCan-15",
+      "scene": "15",
+      "task_type": "clean",
+      "split": "train",
+      "goal_content_seen_in_available_ift": false
+    },
+    {
+      "gamefile": "/mnt/yulan/xujiahui/projects/LatentSkill/alfworld_data/alfworld/json_2.1.1/train/pick_clean_then_place_in_recep-SoapBar-None-Drawer-409/trial_T20190907_040400_932831/game.tw-pddl",
+      "family": "pick_clean_then_place_in_recep-SoapBar-None-Drawer-409",
+      "scene": "409",
+      "task_type": "clean",
+      "split": "train",
+      "goal_content_seen_in_available_ift": false
+    },
+    {
+      "gamefile": "/mnt/yulan/xujiahui/projects/LatentSkill/alfworld_data/alfworld/json_2.1.1/train/pick_and_place_simple-ToiletPaper-None-ToiletPaperHanger-409/trial_T20190907_152755_762065/game.tw-pddl",
+      "family": "pick_and_place_simple-ToiletPaper-None-ToiletPaperHanger-409",
+      "scene": "409",
+      "task_type": "pick_and_place",
+      "split": "train",
+      "goal_content_seen_in_available_ift": false
+    },
+    {
+      "gamefile": "/mnt/yulan/xujiahui/projects/LatentSkill/alfworld_data/alfworld/json_2.1.1/train/pick_and_place_simple-Newspaper-None-Ottoman-203/trial_T20190908_173745_461691/game.tw-pddl",
+      "family": "pick_and_place_simple-Newspaper-None-Ottoman-203",
+      "scene": "203",
+      "task_type": "pick_and_place",
+      "split": "train",
+      "goal_content_seen_in_available_ift": false
+    },
+    {
+      "gamefile": "/mnt/yulan/xujiahui/projects/LatentSkill/alfworld_data/alfworld/json_2.1.1/train/pick_and_place_simple-SprayBottle-None-GarbageCan-421/trial_T20190908_122018_917803/game.tw-pddl",
+      "family": "pick_and_place_simple-SprayBottle-None-GarbageCan-421",
+      "scene": "421",
+      "task_type": "pick_and_place",
+      "split": "train",
+      "goal_content_seen_in_available_ift": false
+    },
+    {
+      "gamefile": "/mnt/yulan/xujiahui/projects/LatentSkill/alfworld_data/alfworld/json_2.1.1/train/pick_and_place_simple-SoapBottle-None-Toilet-426/trial_T20190906_180946_873820/game.tw-pddl",
+      "family": "pick_and_place_simple-SoapBottle-None-Toilet-426",
+      "scene": "426",
+      "task_type": "pick_and_place",
+      "split": "train",
+      "goal_content_seen_in_available_ift": false
+    },
+    {
+      "gamefile": "/mnt/yulan/xujiahui/projects/LatentSkill/alfworld_data/alfworld/json_2.1.1/train/pick_two_obj_and_place-RemoteControl-None-CoffeeTable-222/trial_T20190909_060946_246253/game.tw-pddl",
+      "family": "pick_two_obj_and_place-RemoteControl-None-CoffeeTable-222",
+      "scene": "222",
+      "task_type": "pick_two_and_place",
+      "split": "train",
+      "goal_content_seen_in_available_ift": false
+    },
+    {
+      "gamefile": "/mnt/yulan/xujiahui/projects/LatentSkill/alfworld_data/alfworld/json_2.1.1/train/pick_two_obj_and_place-Vase-None-CoffeeTable-227/trial_T20190909_034051_446517/game.tw-pddl",
+      "family": "pick_two_obj_and_place-Vase-None-CoffeeTable-227",
+      "scene": "227",
+      "task_type": "pick_two_and_place",
+      "split": "train",
+      "goal_content_seen_in_available_ift": false
+    },
+    {
+      "gamefile": "/mnt/yulan/xujiahui/projects/LatentSkill/alfworld_data/alfworld/json_2.1.1/train/pick_two_obj_and_place-CreditCard-None-ArmChair-217/trial_T20190909_114045_918354/game.tw-pddl",
+      "family": "pick_two_obj_and_place-CreditCard-None-ArmChair-217",
+      "scene": "217",
+      "task_type": "pick_two_and_place",
+      "split": "train",
+      "goal_content_seen_in_available_ift": false
+    },
+    {
+      "gamefile": "/mnt/yulan/xujiahui/projects/LatentSkill/alfworld_data/alfworld/json_2.1.1/train/pick_two_obj_and_place-SprayBottle-None-Cabinet-407/trial_T20190907_144622_713062/game.tw-pddl",
+      "family": "pick_two_obj_and_place-SprayBottle-None-Cabinet-407",
+      "scene": "407",
+      "task_type": "pick_two_and_place",
+      "split": "train",
+      "goal_content_seen_in_available_ift": false
+    },
+    {
+      "gamefile": "/mnt/yulan/xujiahui/projects/LatentSkill/alfworld_data/alfworld/json_2.1.1/train/look_at_obj_in_light-Vase-None-DeskLamp-303/trial_T20190907_150431_362791/game.tw-pddl",
+      "family": "look_at_obj_in_light-Vase-None-DeskLamp-303",
+      "scene": "303",
+      "task_type": "look_at_obj_in_light",
+      "split": "train",
+      "goal_content_seen_in_available_ift": false
+    },
+    {
+      "gamefile": "/mnt/yulan/xujiahui/projects/LatentSkill/alfworld_data/alfworld/json_2.1.1/train/look_at_obj_in_light-Vase-None-DeskLamp-216/trial_T20190906_200458_622810/game.tw-pddl",
+      "family": "look_at_obj_in_light-Vase-None-DeskLamp-216",
+      "scene": "216",
+      "task_type": "look_at_obj_in_light",
+      "split": "train",
+      "goal_content_seen_in_available_ift": false
+    },
+    {
+      "gamefile": "/mnt/yulan/xujiahui/projects/LatentSkill/alfworld_data/alfworld/json_2.1.1/train/look_at_obj_in_light-Pen-None-DeskLamp-323/trial_T20190908_125522_292336/game.tw-pddl",
+      "family": "look_at_obj_in_light-Pen-None-DeskLamp-323",
+      "scene": "323",
+      "task_type": "look_at_obj_in_light",
+      "split": "train",
+      "goal_content_seen_in_available_ift": true
+    },
+    {
+      "gamefile": "/mnt/yulan/xujiahui/projects/LatentSkill/alfworld_data/alfworld/json_2.1.1/train/look_at_obj_in_light-Book-None-DeskLamp-306/trial_T20190908_035314_430411/game.tw-pddl",
+      "family": "look_at_obj_in_light-Book-None-DeskLamp-306",
+      "scene": "306",
+      "task_type": "look_at_obj_in_light",
+      "split": "train",
+      "goal_content_seen_in_available_ift": true
+    },
+    {
+      "gamefile": "/mnt/yulan/xujiahui/projects/LatentSkill/alfworld_data/alfworld/json_2.1.1/train/pick_heat_then_place_in_recep-Mug-None-CoffeeMachine-16/trial_T20190908_181242_051846/game.tw-pddl",
+      "family": "pick_heat_then_place_in_recep-Mug-None-CoffeeMachine-16",
+      "scene": "16",
+      "task_type": "heat",
+      "split": "tune",
+      "goal_content_seen_in_available_ift": false
+    },
+    {
+      "gamefile": "/mnt/yulan/xujiahui/projects/LatentSkill/alfworld_data/alfworld/json_2.1.1/train/pick_heat_then_place_in_recep-Cup-None-Cabinet-8/trial_T20190909_154239_647826/game.tw-pddl",
+      "family": "pick_heat_then_place_in_recep-Cup-None-Cabinet-8",
+      "scene": "8",
+      "task_type": "heat",
+      "split": "tune",
+      "goal_content_seen_in_available_ift": false
+    },
+    {
+      "gamefile": "/mnt/yulan/xujiahui/projects/LatentSkill/alfworld_data/alfworld/json_2.1.1/train/pick_cool_then_place_in_recep-Mug-None-CoffeeMachine-16/trial_T20190908_184207_182636/game.tw-pddl",
+      "family": "pick_cool_then_place_in_recep-Mug-None-CoffeeMachine-16",
+      "scene": "16",
+      "task_type": "cool",
+      "split": "tune",
+      "goal_content_seen_in_available_ift": false
+    },
+    {
+      "gamefile": "/mnt/yulan/xujiahui/projects/LatentSkill/alfworld_data/alfworld/json_2.1.1/train/pick_cool_then_place_in_recep-Lettuce-None-DiningTable-18/trial_T20190909_122703_212954/game.tw-pddl",
+      "family": "pick_cool_then_place_in_recep-Lettuce-None-DiningTable-18",
+      "scene": "18",
+      "task_type": "cool",
+      "split": "tune",
+      "goal_content_seen_in_available_ift": false
+    },
+    {
+      "gamefile": "/mnt/yulan/xujiahui/projects/LatentSkill/alfworld_data/alfworld/json_2.1.1/train/pick_clean_then_place_in_recep-Ladle-None-Drawer-16/trial_T20190909_024553_470193/game.tw-pddl",
+      "family": "pick_clean_then_place_in_recep-Ladle-None-Drawer-16",
+      "scene": "16",
+      "task_type": "clean",
+      "split": "tune",
+      "goal_content_seen_in_available_ift": false
+    },
+    {
+      "gamefile": "/mnt/yulan/xujiahui/projects/LatentSkill/alfworld_data/alfworld/json_2.1.1/train/pick_clean_then_place_in_recep-Cloth-None-CounterTop-408/trial_T20190908_103208_369693/game.tw-pddl",
+      "family": "pick_clean_then_place_in_recep-Cloth-None-CounterTop-408",
+      "scene": "408",
+      "task_type": "clean",
+      "split": "tune",
+      "goal_content_seen_in_available_ift": false
+    },
+    {
+      "gamefile": "/mnt/yulan/xujiahui/projects/LatentSkill/alfworld_data/alfworld/json_2.1.1/train/pick_and_place_simple-SprayBottle-None-Toilet-412/trial_T20190909_154903_600253/game.tw-pddl",
+      "family": "pick_and_place_simple-SprayBottle-None-Toilet-412",
+      "scene": "412",
+      "task_type": "pick_and_place",
+      "split": "tune",
+      "goal_content_seen_in_available_ift": false
+    },
+    {
+      "gamefile": "/mnt/yulan/xujiahui/projects/LatentSkill/alfworld_data/alfworld/json_2.1.1/train/pick_and_place_simple-Pillow-None-ArmChair-206/trial_T20190909_011649_821132/game.tw-pddl",
+      "family": "pick_and_place_simple-Pillow-None-ArmChair-206",
+      "scene": "206",
+      "task_type": "pick_and_place",
+      "split": "tune",
+      "goal_content_seen_in_available_ift": false
+    },
+    {
+      "gamefile": "/mnt/yulan/xujiahui/projects/LatentSkill/alfworld_data/alfworld/json_2.1.1/train/pick_two_obj_and_place-CellPhone-None-Bed-309/trial_T20190910_144311_654244/game.tw-pddl",
+      "family": "pick_two_obj_and_place-CellPhone-None-Bed-309",
+      "scene": "309",
+      "task_type": "pick_two_and_place",
+      "split": "tune",
+      "goal_content_seen_in_available_ift": false
+    },
+    {
+      "gamefile": "/mnt/yulan/xujiahui/projects/LatentSkill/alfworld_data/alfworld/json_2.1.1/train/pick_two_obj_and_place-AlarmClock-None-Dresser-318/trial_T20190919_024708_968984/game.tw-pddl",
+      "family": "pick_two_obj_and_place-AlarmClock-None-Dresser-318",
+      "scene": "318",
+      "task_type": "pick_two_and_place",
+      "split": "tune",
+      "goal_content_seen_in_available_ift": false
+    },
+    {
+      "gamefile": "/mnt/yulan/xujiahui/projects/LatentSkill/alfworld_data/alfworld/json_2.1.1/train/look_at_obj_in_light-KeyChain-None-DeskLamp-309/trial_T20190909_094219_644881/game.tw-pddl",
+      "family": "look_at_obj_in_light-KeyChain-None-DeskLamp-309",
+      "scene": "309",
+      "task_type": "look_at_obj_in_light",
+      "split": "tune",
+      "goal_content_seen_in_available_ift": false
+    },
+    {
+      "gamefile": "/mnt/yulan/xujiahui/projects/LatentSkill/alfworld_data/alfworld/json_2.1.1/train/look_at_obj_in_light-AlarmClock-None-DeskLamp-301/trial_T20190907_174142_375532/game.tw-pddl",
+      "family": "look_at_obj_in_light-AlarmClock-None-DeskLamp-301",
+      "scene": "301",
+      "task_type": "look_at_obj_in_light",
+      "split": "tune",
+      "goal_content_seen_in_available_ift": true
+    },
+    {
+      "gamefile": "/mnt/yulan/xujiahui/projects/LatentSkill/alfworld_data/alfworld/json_2.1.1/train/pick_heat_then_place_in_recep-Cup-None-CounterTop-17/trial_T20190908_130923_081236/game.tw-pddl",
+      "family": "pick_heat_then_place_in_recep-Cup-None-CounterTop-17",
+      "scene": "17",
+      "task_type": "heat",
+      "split": "validation",
+      "goal_content_seen_in_available_ift": false
+    },
+    {
+      "gamefile": "/mnt/yulan/xujiahui/projects/LatentSkill/alfworld_data/alfworld/json_2.1.1/train/pick_heat_then_place_in_recep-Mug-None-Cabinet-30/trial_T20190909_044538_375844/game.tw-pddl",
+      "family": "pick_heat_then_place_in_recep-Mug-None-Cabinet-30",
+      "scene": "30",
+      "task_type": "heat",
+      "split": "validation",
+      "goal_content_seen_in_available_ift": false
+    },
+    {
+      "gamefile": "/mnt/yulan/xujiahui/projects/LatentSkill/alfworld_data/alfworld/json_2.1.1/train/pick_cool_then_place_in_recep-Lettuce-None-GarbageCan-17/trial_T20190907_114546_602779/game.tw-pddl",
+      "family": "pick_cool_then_place_in_recep-Lettuce-None-GarbageCan-17",
+      "scene": "17",
+      "task_type": "cool",
+      "split": "validation",
+      "goal_content_seen_in_available_ift": false
+    },
+    {
+      "gamefile": "/mnt/yulan/xujiahui/projects/LatentSkill/alfworld_data/alfworld/json_2.1.1/train/pick_cool_then_place_in_recep-Mug-None-CoffeeMachine-30/trial_T20190907_152956_792394/game.tw-pddl",
+      "family": "pick_cool_then_place_in_recep-Mug-None-CoffeeMachine-30",
+      "scene": "30",
+      "task_type": "cool",
+      "split": "validation",
+      "goal_content_seen_in_available_ift": false
+    },
+    {
+      "gamefile": "/mnt/yulan/xujiahui/projects/LatentSkill/alfworld_data/alfworld/json_2.1.1/train/pick_clean_then_place_in_recep-SoapBar-None-Toilet-428/trial_T20190907_041404_517664/game.tw-pddl",
+      "family": "pick_clean_then_place_in_recep-SoapBar-None-Toilet-428",
+      "scene": "428",
+      "task_type": "clean",
+      "split": "validation",
+      "goal_content_seen_in_available_ift": false
+    },
+    {
+      "gamefile": "/mnt/yulan/xujiahui/projects/LatentSkill/alfworld_data/alfworld/json_2.1.1/train/pick_clean_then_place_in_recep-SoapBar-None-CounterTop-416/trial_T20190909_032422_085040/game.tw-pddl",
+      "family": "pick_clean_then_place_in_recep-SoapBar-None-CounterTop-416",
+      "scene": "416",
+      "task_type": "clean",
+      "split": "validation",
+      "goal_content_seen_in_available_ift": false
+    },
+    {
+      "gamefile": "/mnt/yulan/xujiahui/projects/LatentSkill/alfworld_data/alfworld/json_2.1.1/train/pick_and_place_simple-SoapBar-None-GarbageCan-416/trial_T20190908_020828_777495/game.tw-pddl",
+      "family": "pick_and_place_simple-SoapBar-None-GarbageCan-416",
+      "scene": "416",
+      "task_type": "pick_and_place",
+      "split": "validation",
+      "goal_content_seen_in_available_ift": false
+    },
+    {
+      "gamefile": "/mnt/yulan/xujiahui/projects/LatentSkill/alfworld_data/alfworld/json_2.1.1/train/pick_and_place_simple-Vase-None-Safe-204/trial_T20190919_000336_714640/game.tw-pddl",
+      "family": "pick_and_place_simple-Vase-None-Safe-204",
+      "scene": "204",
+      "task_type": "pick_and_place",
+      "split": "validation",
+      "goal_content_seen_in_available_ift": false
+    },
+    {
+      "gamefile": "/mnt/yulan/xujiahui/projects/LatentSkill/alfworld_data/alfworld/json_2.1.1/train/pick_two_obj_and_place-WineBottle-None-Cabinet-17/trial_T20190909_014123_556566/game.tw-pddl",
+      "family": "pick_two_obj_and_place-WineBottle-None-Cabinet-17",
+      "scene": "17",
+      "task_type": "pick_two_and_place",
+      "split": "validation",
+      "goal_content_seen_in_available_ift": false
+    },
+    {
+      "gamefile": "/mnt/yulan/xujiahui/projects/LatentSkill/alfworld_data/alfworld/json_2.1.1/train/pick_two_obj_and_place-Egg-None-Microwave-30/trial_T20190907_163511_185881/game.tw-pddl",
+      "family": "pick_two_obj_and_place-Egg-None-Microwave-30",
+      "scene": "30",
+      "task_type": "pick_two_and_place",
+      "split": "validation",
+      "goal_content_seen_in_available_ift": false
+    },
+    {
+      "gamefile": "/mnt/yulan/xujiahui/projects/LatentSkill/alfworld_data/alfworld/json_2.1.1/train/look_at_obj_in_light-CreditCard-None-DeskLamp-324/trial_T20190910_025955_546151/game.tw-pddl",
+      "family": "look_at_obj_in_light-CreditCard-None-DeskLamp-324",
+      "scene": "324",
+      "task_type": "look_at_obj_in_light",
+      "split": "validation",
+      "goal_content_seen_in_available_ift": false
+    },
+    {
+      "gamefile": "/mnt/yulan/xujiahui/projects/LatentSkill/alfworld_data/alfworld/json_2.1.1/train/look_at_obj_in_light-Laptop-None-DeskLamp-328/trial_T20190908_201601_178214/game.tw-pddl",
+      "family": "look_at_obj_in_light-Laptop-None-DeskLamp-328",
+      "scene": "328",
+      "task_type": "look_at_obj_in_light",
+      "split": "validation",
+      "goal_content_seen_in_available_ift": false
+    },
+    {
+      "gamefile": "/mnt/yulan/xujiahui/projects/LatentSkill/alfworld_data/alfworld/json_2.1.1/train/pick_heat_then_place_in_recep-Potato-None-GarbageCan-6/trial_T20190909_132658_532074/game.tw-pddl",
+      "family": "pick_heat_then_place_in_recep-Potato-None-GarbageCan-6",
+      "scene": "6",
+      "task_type": "heat",
+      "split": "sealed_test"
+    },
+    {
+      "gamefile": "/mnt/yulan/xujiahui/projects/LatentSkill/alfworld_data/alfworld/json_2.1.1/train/pick_heat_then_place_in_recep-Mug-None-Cabinet-11/trial_T20190908_074036_014884/game.tw-pddl",
+      "family": "pick_heat_then_place_in_recep-Mug-None-Cabinet-11",
+      "scene": "11",
+      "task_type": "heat",
+      "split": "sealed_test"
+    },
+    {
+      "gamefile": "/mnt/yulan/xujiahui/projects/LatentSkill/alfworld_data/alfworld/json_2.1.1/train/pick_cool_then_place_in_recep-Bread-None-DiningTable-11/trial_T20190908_005202_990135/game.tw-pddl",
+      "family": "pick_cool_then_place_in_recep-Bread-None-DiningTable-11",
+      "scene": "11",
+      "task_type": "cool",
+      "split": "sealed_test"
+    },
+    {
+      "gamefile": "/mnt/yulan/xujiahui/projects/LatentSkill/alfworld_data/alfworld/json_2.1.1/train/pick_cool_then_place_in_recep-Tomato-None-Microwave-6/trial_T20190908_082344_600536/game.tw-pddl",
+      "family": "pick_cool_then_place_in_recep-Tomato-None-Microwave-6",
+      "scene": "6",
+      "task_type": "cool",
+      "split": "sealed_test"
+    },
+    {
+      "gamefile": "/mnt/yulan/xujiahui/projects/LatentSkill/alfworld_data/alfworld/json_2.1.1/train/pick_clean_then_place_in_recep-Potato-None-Microwave-11/trial_T20190908_215946_926015/game.tw-pddl",
+      "family": "pick_clean_then_place_in_recep-Potato-None-Microwave-11",
+      "scene": "11",
+      "task_type": "clean",
+      "split": "sealed_test"
+    },
+    {
+      "gamefile": "/mnt/yulan/xujiahui/projects/LatentSkill/alfworld_data/alfworld/json_2.1.1/train/pick_clean_then_place_in_recep-DishSponge-None-Cabinet-414/trial_T20190909_061538_357779/game.tw-pddl",
+      "family": "pick_clean_then_place_in_recep-DishSponge-None-Cabinet-414",
+      "scene": "414",
+      "task_type": "clean",
+      "split": "sealed_test"
+    },
+    {
+      "gamefile": "/mnt/yulan/xujiahui/projects/LatentSkill/alfworld_data/alfworld/json_2.1.1/train/pick_and_place_simple-RemoteControl-None-ArmChair-207/trial_T20190908_140559_342150/game.tw-pddl",
+      "family": "pick_and_place_simple-RemoteControl-None-ArmChair-207",
+      "scene": "207",
+      "task_type": "pick_and_place",
+      "split": "sealed_test"
+    },
+    {
+      "gamefile": "/mnt/yulan/xujiahui/projects/LatentSkill/alfworld_data/alfworld/json_2.1.1/train/pick_and_place_simple-Bowl-None-Fridge-6/trial_T20190906_231022_136645/game.tw-pddl",
+      "family": "pick_and_place_simple-Bowl-None-Fridge-6",
+      "scene": "6",
+      "task_type": "pick_and_place",
+      "split": "sealed_test"
+    },
+    {
+      "gamefile": "/mnt/yulan/xujiahui/projects/LatentSkill/alfworld_data/alfworld/json_2.1.1/train/pick_two_obj_and_place-SprayBottle-None-Cart-401/trial_T20190906_193428_881063/game.tw-pddl",
+      "family": "pick_two_obj_and_place-SprayBottle-None-Cart-401",
+      "scene": "401",
+      "task_type": "pick_two_and_place",
+      "split": "sealed_test"
+    },
+    {
+      "gamefile": "/mnt/yulan/xujiahui/projects/LatentSkill/alfworld_data/alfworld/json_2.1.1/train/pick_two_obj_and_place-Plate-None-CoffeeTable-201/trial_T20190918_172828_710071/game.tw-pddl",
+      "family": "pick_two_obj_and_place-Plate-None-CoffeeTable-201",
+      "scene": "201",
+      "task_type": "pick_two_and_place",
+      "split": "sealed_test"
+    },
+    {
+      "gamefile": "/mnt/yulan/xujiahui/projects/LatentSkill/alfworld_data/alfworld/json_2.1.1/train/look_at_obj_in_light-Book-None-DeskLamp-317/trial_T20190907_162837_975033/game.tw-pddl",
+      "family": "look_at_obj_in_light-Book-None-DeskLamp-317",
+      "scene": "317",
+      "task_type": "look_at_obj_in_light",
+      "split": "sealed_test"
+    },
+    {
+      "gamefile": "/mnt/yulan/xujiahui/projects/LatentSkill/alfworld_data/alfworld/json_2.1.1/train/look_at_obj_in_light-Statue-None-DeskLamp-319/trial_T20190907_035512_450549/game.tw-pddl",
+      "family": "look_at_obj_in_light-Statue-None-DeskLamp-319",
+      "scene": "319",
+      "task_type": "look_at_obj_in_light",
+      "split": "sealed_test"
+    }
+  ],
+  "source": "ALFWorld train only",
+  "counts_per_type": {
+    "train": 4,
+    "tune": 2,
+    "validation": 2,
+    "sealed_test": 2
+  },
+  "protected_scenes": [
+    "11",
+    "21",
+    "6"
+  ],
+  "checkpoint": "checkpoints/latentskill_sft_qwen3_8b/checkpoint-epoch-10",
+  "max_steps": 50,
+  "max_new_tokens": 4096,
+  "states_per_game": 4,
+  "label": "Delta R = binary terminal success On - Off under identical remaining 50-step budget",
+  "selection": "C and activation threshold on tune only; validation evaluated once; sealed_test untouched",
+  "feature_duplicate_policy": "keep first split in train/tune/validation order; remove exact cross-split feature duplicates without using rewards"
+}
